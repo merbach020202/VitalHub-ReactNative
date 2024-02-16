@@ -10,4 +10,5 @@ export const Title = styled.Text`
 ////////////Profile////////////
 export const ProfileName = styled(Title)`
     margin-top: 20px;
+    font-size: 16px;
 `

@@ -41,3 +41,22 @@ export const PasswordButton = styled(Button)`
     margin-top: 30px;
 `
 
+////////////////Profile////////////////
+export const ButtonProfile = styled(Button)`
+    margin-bottom: 20px;
+    margin-top: -30px;
+`
+
+////////////////HomePatient////////////////
+export const ButtonHomePatient = styled(Button)`
+    background-color: white;
+    border: 2px solid #607EC5;
+
+    width: 28%;
+
+    margin-left: 10px;
+`
+
+export const ButtonHomePatientUnico = styled(Button)`
+    width: 28%;
+`

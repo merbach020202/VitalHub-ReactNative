@@ -5,7 +5,7 @@ import { Title } from "../../components/Title/Style"
 import { Input } from "../../components/Input/Input"
 import { PasswordButton } from "../../components/Button/Style"
 import { ButtonTitle } from "../../components/ButtonTitle/Style"
-import { SubTitleText } from "../../components/Subtitulo/Style"
+import { SubTitleText } from "../../components/Subtitle/Style"
 
 import { AntDesign } from '@expo/vector-icons';
 import { ConteinerIcon } from "../../components/ConteinerIcon/Style"

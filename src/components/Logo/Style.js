@@ -13,5 +13,7 @@ export const Logo = styled.Image`
 
 export const LogoPerfil = styled.Image`
     width: 100%;
-    height: 280px;
+    height: 320px;
+
+    margin-bottom: 80px;
 `

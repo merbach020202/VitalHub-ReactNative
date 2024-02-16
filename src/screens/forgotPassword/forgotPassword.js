@@ -3,7 +3,7 @@
 import { Logo } from "../../components/Logo/Style"
 import { Container } from "../../components/Conteiner/Style"
 import { Title } from "../../components/Title/Style"
-import { SubTitleText } from "../../components/Subtitulo/Style"
+import { SubTitleText } from "../../components/Subtitle/Style" 
 import { Input } from "../../components/Input/Input"
 import { Button, ButtonContinue } from "../../components/Button/Style"
 import { ButtonTitle } from "../../components/ButtonTitle/Style"

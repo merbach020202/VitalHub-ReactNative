@@ -9,14 +9,48 @@ export const SubTitleText = styled.Text`
 
     padding: 20px;
 `
-///////////Subtitle///////////
+///////////PROFILE///////////
 
 export const SubTitleBox = styled.View`
-    flex-direction: row;
+    position: absolute;
 
-    align-content: center;
-    justify-content: space-evenly;
+    margin-top: 266px;
+
+    align-items: center;
+    justify-items: center;
     width: 70%;
 
-   margin-top: -5px;
+    border-radius: 5px;
+    background-color: white;
+
+    elevation: 5px;
+`
+
+export const SubTitleTextProfile = styled(SubTitleText)`
+    font-family: Quicksand_600SemiBold;
+    color: black;
+
+    text-align: start;
+    padding: 0;
+
+    margin-bottom: 10px;
+`
+
+export const BottomProfileText = styled(SubTitleText)`
+    justify-content: space-between;
+    align-items: flex-start;
+`
+export const BottomInputs = styled.View`
+    flex-direction: row;
+    width: 95%;
+
+    justify-content: space-around;
+`
+
+export const LeftInput = styled.View`
+    margin-left: -20px;
+`
+
+export const RightInput = styled.View`
+
 `

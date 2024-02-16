@@ -1,44 +1,67 @@
-import { ScrollView, Text } from "react-native";
+import { ScrollView } from "react-native";
 import { Container } from "../../components/Conteiner/Style";
 import { LogoPerfil } from "../../components/Logo/Style";
 import { ProfileName } from "../../components/Title/Style";
-import { Input, ProfileInput } from "../../components/Input/Input";
-import { LinkMedium } from "../../components/Links/Style";
-import { Button } from "../../components/Button/Style";
+import { BottomProfileInput, BoxInputProfile, ProfileInput } from "../../components/Input/Input";
+import { Button, ButtonProfile } from "../../components/Button/Style";
 import { ButtonTitle } from "../../components/ButtonTitle/Style";
-import { SubTitleBox, SubTitleText } from "../../components/Subtitle/Style";
+import {
+  BottomInputs,
+  LeftInput,
+  RightInput,
+  SubTitleBox,
+  SubTitleText,
+  SubTitleTextProfile,
+} from "../../components/Subtitle/Style";
 
 export const Profile = ({ profile }) => {
   return (
     <ScrollView>
-
       <Container>
-
         <LogoPerfil source={require("../../assets/ImgLogoPerfil.jpg")} />
 
-        <ProfileName>Richard Kosta</ProfileName>
-
         <SubTitleBox>
-          <SubTitleText>22 anos</SubTitleText>
+          <ProfileName>Richard Kosta</ProfileName>
           <SubTitleText>richard.kosta@gmail.com</SubTitleText>
         </SubTitleBox>
 
+        <BoxInputProfile>
+          <SubTitleTextProfile>Data de nascimento</SubTitleTextProfile>
+          <ProfileInput placeholder="04/05/1999" />
 
-        <Text>Descrição</Text>
-        <ProfileInput placeholder="Descrição" />
+          <SubTitleTextProfile>CPF</SubTitleTextProfile>
+          <ProfileInput placeholder="859********" secureTextEntry />
 
-        <Input placeholder="Digite sua Senha" secureTextEntry />
+          <SubTitleTextProfile>Endereço</SubTitleTextProfile>
+          <ProfileInput placeholder="Rua Vicenso Silva, 987" />
 
-        <ProfileInput placeholder="Prescrição médica" />
+          <BottomInputs>
 
-        <LinkMedium>Esqueceu sua senha?</LinkMedium>
+            <LeftInput>
+              <SubTitleTextProfile>Cep</SubTitleTextProfile>
+
+              <BottomProfileInput placeholder="06548-909" secureTextEntry />
+            </LeftInput>
+
+            <RightInput>
+              <SubTitleTextProfile>Cidade</SubTitleTextProfile>
+
+              <BottomProfileInput placeholder="Moema-SP" />
+            </RightInput>
+
+          </BottomInputs>
+
+        </BoxInputProfile>
+
+        <ButtonProfile>
+          <ButtonTitle>Salvar</ButtonTitle>
+        </ButtonProfile>
 
         <Button>
-          <ButtonTitle>Entrar</ButtonTitle>
+          <ButtonTitle>Editar</ButtonTitle>
         </Button>
-        
-      </Container>
 
+      </Container>
     </ScrollView>
   );
 };

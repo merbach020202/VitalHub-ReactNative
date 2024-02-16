@@ -30,7 +30,26 @@ export const InputEmailCode = styled(Input)`
 
 ////////////Profile////////////
 
-export const ProfileInput = styled(Input)`
+export const ProfileInput = styled.TextInput`
     width: 90%;
-    height: 120px;
+    height: 55px;
+    padding: 16px;
+
+    border-radius: 5px;
+    background-color: #F5F3F3;
+
+    margin-bottom: 20px;
+
+    font-family: 'MontserratAlternates_500Medium';
+    font-size: 14px;
+    color: black;
+`
+
+export const BoxInputProfile = styled.View`
+    height: 500px;
+    width: 90%;    
+`
+
+export const BottomProfileInput = styled(ProfileInput)`
+    width: 140px;
 `
