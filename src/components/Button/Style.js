@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Button = styled.TouchableOpacity`
     width: 90%;
@@ -12,8 +12,19 @@ export const Button = styled.TouchableOpacity`
     background-color: #496BBA;
     color: #496BBA;
     border-radius: 5px;
+
+    
 `
 
+/* Estilização diferenciada para colocar no Button */
+
+    /* ${props => props.clickButton ? css`
+    `: css`
+        background-color: transparent;
+        border: 2px solid #607EC5;
+    `} */
+
+    
 export const ButtonTitleGoogle = styled.Text`
     font-family: 'MontserratAlternates_700Bold';
     font-size: 14px;

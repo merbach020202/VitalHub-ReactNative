@@ -54,3 +54,19 @@ export const LeftInput = styled.View`
 export const RightInput = styled.View`
 
 `
+
+///////////HomePatient///////////
+export const SubTitleTextHomePatient = styled(SubTitleText)`
+    padding: 5px;
+    margin-left: -10px;
+`
+
+export const SubTitleTextHomePatientDark = styled(SubTitleText)`
+    font-family: 'Quicksand_600SemiBold';
+    padding: 5px;
+
+    align-self: flex-end;
+
+    margin-top: -35px;
+    margin-right: -20px;
+`

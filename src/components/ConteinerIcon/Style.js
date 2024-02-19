@@ -38,4 +38,6 @@ export const ConteinerIconHomePatient = styled.View`
     align-self: flex-end;
     margin-right: 20px;
     margin-top: 100px;
+
+    position: fixed;
 `

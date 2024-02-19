@@ -40,3 +40,25 @@ export const ContainerHeader = styled(LinearGradient).attrs({
 export const ButtonConteiner = styled.View`
     flex-direction: row;
 `
+
+export const CardConteiner = styled.View`
+    width: 90%;
+    height: 110px;
+
+    border: 1px solid black;
+
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+`
+
+export const TextConteiner = styled.View`
+    width: 150px;
+    height: 80px;
+
+    align-items: center;
+    
+
+    margin-left: -20px;
+`

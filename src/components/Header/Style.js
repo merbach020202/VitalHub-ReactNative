@@ -27,3 +27,12 @@ export const NameUser = styled.Text`
     font-size: 16px;
     color: #FBFBFB;
 `
+
+///////////HomePatient///////////
+export const ImageUserHomePatient = styled.Image`
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+
+    margin-left: -120px;
+`
