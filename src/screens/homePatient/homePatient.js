@@ -6,28 +6,20 @@ import {
   ButtonTitle,
   ButtonTitleHomePatient,
 } from "../../components/ButtonTitle/Style";
-import { StyledCalendarStrip } from "../../components/Calendar/Style";
-import {
-  ButtonConteiner,
-  CardConteiner,
-  Container,
-  TextConteiner,
-} from "../../components/Conteiner/Style";
+import { ButtonConteiner, Container } from "../../components/Conteiner/Style";
 import { Header } from "../../components/Header/Header";
 
-import { FontAwesome5 } from "@expo/vector-icons";
 import CalendarList from "../../components/Calendar/CalendarStrip";
-import { BoxUser, ImageUser, ImageUserHomePatient } from "../../components/Header/Style";
+import { ListComponent } from "../../components/List/List";
+import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard";
 import { useState } from "react";
-import { TitleCard } from "../../components/Title/Style";
-import { SubTitleBox, SubTitleText, SubTitleTextHomePatient, SubTitleTextHomePatientDark } from "../../components/Subtitle/Style";
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "Pendente" },
   { id: 2, nome: "Carlos", situacao: "Realizado" },
   { id: 3, nome: "Carlos", situacao: "Agendado" },
   { id: 4, nome: "Carlos", situacao: "Realizado" },
-  { id: 5, nome: "Carlos", situacao: "Pendente" },
+  { id: 5, nome: "Carlos", situacao: "Cancelado" },
 ];
 
 export const HomePatient = () => {
@@ -40,36 +32,49 @@ export const HomePatient = () => {
       <CalendarList />
 
       <ButtonConteiner>
-        <ButtonHomePatientUnico clickButton={statusList === "pendente"}>
+        <ButtonHomePatientUnico clickButton={statusList === "Pendente"}>
           <ButtonTitle>Agendadas</ButtonTitle>
         </ButtonHomePatientUnico>
 
-        <ButtonHomePatient clickButton={statusList === "realizado"}>
+        <ButtonHomePatient clickButton={statusList === "Realizado"}>
           <ButtonTitleHomePatient>Realizadas</ButtonTitleHomePatient>
         </ButtonHomePatient>
 
-        <ButtonHomePatient clickButton={statusList === "cancelado"}>
+        <ButtonHomePatient clickButton={statusList === "Cancelado"}>
           <ButtonTitleHomePatient>Canceladas</ButtonTitleHomePatient>
         </ButtonHomePatient>
       </ButtonConteiner>
 
-      <CardConteiner>
-          <ImageUserHomePatient source={require("../../assets/MedicoImg.jpg")} />
+      {/* <CardConteiner>
+          <ImageUserHomePatient source={require("../../assets/PerfilImg1.jpg")} />
 
             <TextConteiner>
-                <TitleCard>Dr Claudio</TitleCard>
+                <TitleCard>Niccole Sarga</TitleCard>
 
                 <SubTitleTextHomePatient>22 anos  -</SubTitleTextHomePatient>
                 <SubTitleTextHomePatientDark>Rotina</SubTitleTextHomePatientDark>
             </TextConteiner>
+
+            <ClockConteiner></ClockConteiner>
             
-      </CardConteiner>
+      </CardConteiner> */}
 
-      {/* Icone para ser usada na tela de paciente */}
 
-      {/* <ConteinerIconHomePatient>
-        <FontAwesome5 name="stethoscope" size={24} color="white" />
-      </ConteinerIconHomePatient> */}
+      <ListComponent 
+        data={Consultas}
+        keyExtractor={(item) => item.id}
+
+        renderItem={({item}) => 
+          statusList == item.situacao && (
+            <AppointmentCard
+              situacao={item.situacao}
+            />
+          )
+      }
+      />
+
+      <AppointmentCard />
+
     </Container>
   );
 };

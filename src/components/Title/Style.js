@@ -15,4 +15,6 @@ export const ProfileName = styled(Title)`
 ////////////HomePatient////////////
 export const TitleCard = styled(Title)`
     font-size: 16px;
+
+    margin-left: 25px;
 `

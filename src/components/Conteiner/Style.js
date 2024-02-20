@@ -36,29 +36,35 @@ export const ContainerHeader = styled(LinearGradient).attrs({
 `
 
 ////////////////HomePatient////////////////
-
 export const ButtonConteiner = styled.View`
     flex-direction: row;
 `
 
-export const CardConteiner = styled.View`
-    width: 90%;
-    height: 110px;
+// export const CardConteiner = styled.View`
+//     width: 90%;
+//     height: 110px;
 
-    border: 1px solid black;
+//     flex-direction: row;
 
-    flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
 
-    justify-content: center;
-    align-items: center;
-`
+//     elevation: 2px;
+// `
 
-export const TextConteiner = styled.View`
-    width: 150px;
-    height: 80px;
+// export const TextConteiner = styled.View`
+//     width: 150px;
+//     height: 80px;
 
-    align-items: center;
+//     align-items: center;
     
+//     margin-left: -20px;    
+// `
 
-    margin-left: -20px;
-`
+// export const ClockConteiner = styled.View`
+//     width: 50px;
+// `
+
+
+//////////// Daqui pra cima é o que eu tinha feito antes
+

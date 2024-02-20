@@ -9,7 +9,7 @@ export const Header = () => {
         <ContainerHeader>
             <BoxUser>
                  <ImageUser
-                    source={require("../../assets/ImgLogoPerfil.jpg")}
+                    source={require("../../assets/MedicoImg.jpg")}
                  />
 
                 <DataUser>

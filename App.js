@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator();
 //Import das fontes
 import { useFonts, MontserratAlternates_700Bold, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium } from '@expo-google-fonts/montserrat-alternates';
 
-import { Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/quicksand';
+import { Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular } from '@expo-google-fonts/quicksand';
 import { Profile } from './src/screens/profile/profile';
 import { Home, HomePatient } from './src/screens/homePatient/homePatient';
 
@@ -24,7 +24,8 @@ export default function App() {
     MontserratAlternates_600SemiBold,
     MontserratAlternates_500Medium,
     Quicksand_500Medium,
-    Quicksand_600SemiBold
+    Quicksand_600SemiBold,
+    Quicksand_400Regular
   })
 
   if (!fontsLoaded && !fontsError) {
