@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { ButtonTitle } from "../ButtonTitle/Style";
 
 export const Button = styled.TouchableOpacity`
     width: 90%;
@@ -71,3 +72,18 @@ export const ButtonHomePatient = styled(Button)`
 export const ButtonHomePatientUnico = styled(Button)`
     width: 28%;
 `
+
+////////////////CancelationModal////////////////
+export const ButtonSecondary = styled(Button)`
+    background-color: transparent;
+    border: none;
+`
+
+export const ButtonSecondarTitle = styled(ButtonTitle)`
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: #344f8f;
+    font-family: 'MontserratAlternates_600SemiBold';
+    font-size: 14px;
+`
+

@@ -11,8 +11,9 @@ import { Header } from "../../components/Header/Header";
 
 import CalendarList from "../../components/Calendar/CalendarStrip";
 import { ListComponent } from "../../components/List/List";
-import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard";
 import { useState } from "react";
+import { Footer } from "../../components/Footer/Footer";
+import { AppointmentCardPatient } from "../../components/AppointmentCardPatient/AppointmentCardPatient";
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "Pendente" },
@@ -45,21 +46,6 @@ export const HomePatient = () => {
         </ButtonHomePatient>
       </ButtonConteiner>
 
-      {/* <CardConteiner>
-          <ImageUserHomePatient source={require("../../assets/PerfilImg1.jpg")} />
-
-            <TextConteiner>
-                <TitleCard>Niccole Sarga</TitleCard>
-
-                <SubTitleTextHomePatient>22 anos  -</SubTitleTextHomePatient>
-                <SubTitleTextHomePatientDark>Rotina</SubTitleTextHomePatientDark>
-            </TextConteiner>
-
-            <ClockConteiner></ClockConteiner>
-            
-      </CardConteiner> */}
-
-
       <ListComponent 
         data={Consultas}
         keyExtractor={(item) => item.id}
@@ -73,7 +59,9 @@ export const HomePatient = () => {
       }
       />
 
-      <AppointmentCard />
+      <AppointmentCardPatient />
+
+      <Footer/>
 
     </Container>
   );

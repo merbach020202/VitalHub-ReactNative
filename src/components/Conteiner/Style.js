@@ -38,6 +38,8 @@ export const ContainerHeader = styled(LinearGradient).attrs({
 ////////////////HomePatient////////////////
 export const ButtonConteiner = styled.View`
     flex-direction: row;
+
+    margin-bottom: 20px;
 `
 
 // export const CardConteiner = styled.View`

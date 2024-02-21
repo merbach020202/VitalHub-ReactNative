@@ -1,22 +1,34 @@
 import styled from "styled-components";
 import { Title } from "../Title/Style";
 
+export const ContainerCard = styled.View`
+    height: 100%;
+`
+
 export const ContainerCardList = styled.View`
     width: 90%;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
+
+    background-color: #fefcfc;
+
+    elevation: 4px;
 `
 
 export const ProfileImage = styled.Image`
     width: 77px;
     height: 80px;
     border-radius: 5px;
+
+    margin-left: 10px;
 `
 
 export const ContentCard = styled.View`
-    width: 70%;
+    justify-content: center;
+    margin-left: 20px;
 
-    elevation: 4px;
+    width: 70%;
 `
 
 export const DataProfileCard = styled.View`
