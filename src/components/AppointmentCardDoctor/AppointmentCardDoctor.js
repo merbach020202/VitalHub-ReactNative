@@ -2,14 +2,13 @@ import { AntDesign } from '@expo/vector-icons';
 import { ButtonCard, ButtonText, ClockCard, ContainerCard, ContainerCardList, ContentCard, DataProfileCard, ProfileData, ProfileImage, ProfileName, TextAge, TextBold, ViewRow } from './Style';
 
 export const AppointmentCardDoctor = ({
-    situacao = "pendente",
+    situacao = "Pendente",
     onPressCancel,
     onPressAppointment,
 }) => {
     return(
         <>
-        <ContainerCard>
-        
+    
             <ContainerCardList>
 
                 <ProfileImage source={require("../../assets/PerfilImg1.jpg")}/>
@@ -28,7 +27,7 @@ export const AppointmentCardDoctor = ({
 
                      <ViewRow>
                         <ClockCard situacao={situacao}>
-                            <AntDesign name="clockcircle" size={14} color={situacao == "pendente" ? "#49B3BA" : "#8C8A97"}/>
+                            <AntDesign name="clockcircle" size={14} color={situacao == "Pendente" ? "#49B3BA" : "#8C8A97"}/>
                             <TextBold situacao={situacao} color={"#49B3BA"}>14:00</TextBold>
                         </ClockCard>
 
@@ -36,7 +35,7 @@ export const AppointmentCardDoctor = ({
                             situacao == "Cancelado" ? (
                                 <>
                                 </>
-                            ) : situacao == "pendente" ? (
+                            ) : situacao == "Pendente" ? (
                                 <ButtonCard onPress={onPressCancel} >
                                     <ButtonText situacao={situacao}>Cancelar</ButtonText>
                                 </ButtonCard>
@@ -74,7 +73,7 @@ export const AppointmentCardDoctor = ({
 
                      <ViewRow>
                         <ClockCard situacao={situacao}>
-                            <AntDesign name="clockcircle" size={14} color={situacao == "pendente" ? "#49B3BA" : "#8C8A97"}/>
+                            <AntDesign name="clockcircle" size={14} color={situacao == "Pendente" ? "#49B3BA" : "#8C8A97"}/>
                             <TextBold situacao={situacao} color={"#49B3BA"}>14:00</TextBold>
                         </ClockCard>
 
@@ -82,7 +81,7 @@ export const AppointmentCardDoctor = ({
                             situacao == "Cancelado" ? (
                                 <>
                                 </>
-                            ) : situacao == "pendente" ? (
+                            ) : situacao == "Pendente" ? (
                                 <ButtonCard onPress={onPressCancel} >
                                     <ButtonText situacao={situacao}>Cancelar</ButtonText>
                                 </ButtonCard>
@@ -100,9 +99,8 @@ export const AppointmentCardDoctor = ({
 
                 </ContentCard>
 
-            </ContainerCardList>
-            
-        </ContainerCard>
+            </ContainerCardList>                 
+
         </>
     )
 }

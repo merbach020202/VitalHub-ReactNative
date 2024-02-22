@@ -2,18 +2,26 @@ import styled from "styled-components";
 import { Title } from "../Title/Style";
 
 export const ContainerCard = styled.View`
-    height: 100%;
+ height: 250px;
+
+ border: 1px solid red;
+ justify-content: space-evenly;
 `
 
 export const ContainerCardList = styled.View`
     width: 90%;
+    height: 100px;
     flex-direction: row;
     gap: 10px;
     align-items: center;
+    justify-content: space-evenly;
 
     background-color: #fefcfc;
 
     elevation: 4px;
+
+    margin-top: 20px;
+    margin-left: 20px;
 `
 
 export const ProfileImage = styled.Image`
@@ -37,6 +45,8 @@ export const DataProfileCard = styled.View`
 
 export const ProfileName = styled(Title)`
     font-size: 16px;
+
+    margin-top: 20px;
 `
 
 export const ProfileData = styled.View`
@@ -56,6 +66,7 @@ export const TextBold = styled(TextAge)`
 export const ViewRow = styled.View`
     width: 100%;
     margin-bottom: 12px;
+    margin-left: 20px;
     padding: 10px 10px;
     border-radius: 5px;
     flex-direction: row;
@@ -67,14 +78,16 @@ export const ClockCard = styled.View`
     padding: 4px 23px;
     gap: 6px;
     border-radius: 5px;
-    background-color: ${(props) => props.situacao == "pendente" ? "E8FCFD" : "#f1f0f5"};
+    background-color: ${(props) => props.situacao == "Pendente" ? "#E8FCFD" : "#f1f0f5"};
+    margin-left: -30px;
 `
-export const ButtonCard = styled.TouchableOpacity`
 
+export const ButtonCard = styled.TouchableOpacity`
+    margin-right: 25px;
 `
 
 export const ButtonText = styled.Text`
-    color: ${(props) => props.situacao == "pendente" ? "C81D25" : "#344f8f"};
+    color: ${(props) => props.situacao == "Pendente" ? "#C81D25" : "#344f8f"};
     font-family: 'MontserratAlternates_500Medium';
     font-size: 12px;
 `

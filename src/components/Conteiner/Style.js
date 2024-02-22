@@ -38,35 +38,4 @@ export const ContainerHeader = styled(LinearGradient).attrs({
 ////////////////HomePatient////////////////
 export const ButtonConteiner = styled.View`
     flex-direction: row;
-
-    margin-bottom: 20px;
 `
-
-// export const CardConteiner = styled.View`
-//     width: 90%;
-//     height: 110px;
-
-//     flex-direction: row;
-
-//     justify-content: center;
-//     align-items: center;
-
-//     elevation: 2px;
-// `
-
-// export const TextConteiner = styled.View`
-//     width: 150px;
-//     height: 80px;
-
-//     align-items: center;
-    
-//     margin-left: -20px;    
-// `
-
-// export const ClockConteiner = styled.View`
-//     width: 50px;
-// `
-
-
-//////////// Daqui pra cima é o que eu tinha feito antes
-

@@ -3,13 +3,13 @@ import { ConteinerIconHeader } from "../ConteinerIcon/Style";
 import { BoxUser, DataUser, ImageUser, NameUser, TextDefault } from "./Style"
 import { Ionicons } from '@expo/vector-icons';
 
-export const Header = () => {
+export const HeaderPatient = () => {
     return (
 
         <ContainerHeader>
             <BoxUser>
                  <ImageUser
-                    source={require("../../assets/MedicoImg.jpg")}
+                    source={require("../../assets/ImgHeader.jpg")}
                  />
 
                 <DataUser>

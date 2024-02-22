@@ -1,23 +1,24 @@
 import { AntDesign } from '@expo/vector-icons';
 import { ButtonCard, ButtonText, ClockCard, ContainerCard, ContainerCardList, ContentCard, DataProfileCard, ProfileData, ProfileImage, ProfileName, TextAge, TextBold, ViewRow } from './Style';
+import { FontAwesome5 } from "@expo/vector-icons";
+import { ConteinerIconHomePatient } from '../ConteinerIcon/Style';
 
 export const AppointmentCardPatient = ({
-    situacao = "pendente",
+    situacao = "Pendente",
     onPressCancel,
     onPressAppointment,
 }) => {
     return(
         <>
-        <ContainerCard>
-        
+    
             <ContainerCardList>
 
-                <ProfileImage source={require("../../assets/PerfilImg1.jpg")}/>
+                <ProfileImage source={require("../../assets/MedicoImg.jpg")}/>
 
                 <ContentCard>
 
                     <DataProfileCard>
-                        <ProfileName>Niccole Sarga</ProfileName>
+                        <ProfileName>Dr Cláudio</ProfileName>
 
                         <ProfileData>
                             <TextAge>22</TextAge>
@@ -28,7 +29,7 @@ export const AppointmentCardPatient = ({
 
                      <ViewRow>
                         <ClockCard situacao={situacao}>
-                            <AntDesign name="clockcircle" size={14} color={situacao == "pendente" ? "#49B3BA" : "#8C8A97"}/>
+                            <AntDesign name="clockcircle" size={14} color={situacao == "Pendente" ? "#49B3BA" : "#8C8A97"}/>
                             <TextBold situacao={situacao} color={"#49B3BA"}>14:00</TextBold>
                         </ClockCard>
 
@@ -36,7 +37,7 @@ export const AppointmentCardPatient = ({
                             situacao == "Cancelado" ? (
                                 <>
                                 </>
-                            ) : situacao == "pendente" ? (
+                            ) : situacao == "Pendente" ? (
                                 <ButtonCard onPress={onPressCancel} >
                                     <ButtonText situacao={situacao}>Cancelar</ButtonText>
                                 </ButtonCard>
@@ -47,62 +48,16 @@ export const AppointmentCardPatient = ({
                             )
                         }
 
-                        {/*<ButtonCard>
-                            <BUttonText>Cancelar</BUttonText>
-                        </ButtonCard>*/}
                     </ViewRow> 
 
                 </ContentCard>
 
-            </ContainerCardList>
-            
-            <ContainerCardList>
+                <ConteinerIconHomePatient>
+                    <FontAwesome5 name="stethoscope" size={24} color="white" />
+                </ConteinerIconHomePatient>
 
-                <ProfileImage source={require("../../assets/ImgLogoPerfil.jpg")}/>
+            </ContainerCardList>          
 
-                <ContentCard>
-
-                    <DataProfileCard>
-                        <ProfileName>Richard Kosta</ProfileName>
-
-                        <ProfileData>
-                            <TextAge>28</TextAge>
-                            <TextBold>Urgência</TextBold>
-                        </ProfileData>
-
-                    </DataProfileCard>
-
-                     <ViewRow>
-                        <ClockCard situacao={situacao}>
-                            <AntDesign name="clockcircle" size={14} color={situacao == "pendente" ? "#49B3BA" : "#8C8A97"}/>
-                            <TextBold situacao={situacao} color={"#49B3BA"}>14:00</TextBold>
-                        </ClockCard>
-
-                        {
-                            situacao == "Cancelado" ? (
-                                <>
-                                </>
-                            ) : situacao == "pendente" ? (
-                                <ButtonCard onPress={onPressCancel} >
-                                    <ButtonText situacao={situacao}>Cancelar</ButtonText>
-                                </ButtonCard>
-                            ) : (
-                                <ButtonCard onPress={onPressAppointment} >
-                                    <ButtonText situacao={situacao}>Ver Prontuário</ButtonText>
-                                </ButtonCard>
-                            )
-                        }
-
-                        {/*<ButtonCard>
-                            <BUttonText>Cancelar</BUttonText>
-                        </ButtonCard>*/}
-                    </ViewRow> 
-
-                </ContentCard>
-
-            </ContainerCardList>
-            
-        </ContainerCard>
         </>
     )
 }

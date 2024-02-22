@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const ContainerFooter = styled.View`
-    width: 90%;
-    height: 70px;
+    width: 100%;
+    height: 73px;
 
     position: absolute;
     justify-content: center;
 
     margin-top: 664px;
+    background-color: white;
 `
 
 export const IconFooter = styled.View`

@@ -25,7 +25,7 @@ import CancelationModal from "../../components/CancelationModal/CancelationModal
   ];
   
   export const HomeDoctor = () => {
-    const [statusList, setStatusList] = useState("pendente");
+    const [statusList, setStatusList] = useState("Pendente");
     //State para os modals
     const[showModalCancel, setShowModalCancel] = useState(false)
     const[showModalAppointment, setShowModalAppointment] = useState(false)
@@ -56,7 +56,7 @@ import CancelationModal from "../../components/CancelationModal/CancelationModal
   
           renderItem={({item}) => 
             statusList == item.situacao && (
-              <AppointmentCard
+              <AppointmentCardDoctor
                 situacao={item.situacao}
                 onPressCancel={() => setShowModalCancel(true)}
                 onPressAppointment={() => setShowModalCancel(true)}
@@ -70,9 +70,7 @@ import CancelationModal from "../../components/CancelationModal/CancelationModal
             setShowModalCancel={setShowModalCancel}
         />
   
-        <AppointmentCardDoctor />
-  
-        <Footer/>
+      <Footer/>
   
       </Container>
     );

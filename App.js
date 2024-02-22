@@ -15,9 +15,8 @@ import { useFonts, MontserratAlternates_700Bold, MontserratAlternates_600SemiBol
 
 import { Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular } from '@expo-google-fonts/quicksand';
 import { Profile } from './src/screens/profile/profile';
-import { Home, HomePatient } from './src/screens/homePatient/homePatient';
+import { HomePatient } from './src/screens/homePatient/homePatient';
 import { HomeDoctor } from './src/screens/homeDoctor/homeDoctor';
-import CancelationModal from './src/components/CancelationModal/CancelationModal';
 
 export default function App() {
 
@@ -117,14 +116,6 @@ export default function App() {
           component={HomeDoctor}
           // titulo da tela
           options={{title: 'HomeDoctor'}}
-        />
-        
-        <Stack.Screen
-          name='CancelationModal'
-          // componente que será chamado
-          component={CancelationModal}
-          // titulo da tela
-          options={{title: 'CancelationModal'}}
         />
 
       </Stack.Navigator>

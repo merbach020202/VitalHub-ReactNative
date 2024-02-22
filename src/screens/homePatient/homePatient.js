@@ -7,13 +7,15 @@ import {
   ButtonTitleHomePatient,
 } from "../../components/ButtonTitle/Style";
 import { ButtonConteiner, Container } from "../../components/Conteiner/Style";
-import { Header } from "../../components/Header/Header";
 
 import CalendarList from "../../components/Calendar/CalendarStrip";
 import { ListComponent } from "../../components/List/List";
 import { useState } from "react";
 import { Footer } from "../../components/Footer/Footer";
 import { AppointmentCardPatient } from "../../components/AppointmentCardPatient/AppointmentCardPatient";
+import { HeaderPatient } from "../../components/HeaderPatient/HeaderPatient";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { ConteinerIcon, ConteinerIconHomePatient } from "../../components/ConteinerIcon/Style";
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "Pendente" },
@@ -24,11 +26,12 @@ const Consultas = [
 ];
 
 export const HomePatient = () => {
-  const [statusList, setStatusList] = useState("pendente");
+  const [statusList, setStatusList] = useState("Pendente");
+  const [showModalCancel, setShowModalCancel] = useState(false);
 
   return (
     <Container>
-      <Header />
+      <HeaderPatient />
 
       <CalendarList />
 
@@ -46,23 +49,24 @@ export const HomePatient = () => {
         </ButtonHomePatient>
       </ButtonConteiner>
 
-      <ListComponent 
+      <ListComponent
         data={Consultas}
         keyExtractor={(item) => item.id}
-
-        renderItem={({item}) => 
+        renderItem={({ item }) =>
           statusList == item.situacao && (
-            <AppointmentCard
+            <AppointmentCardPatient
               situacao={item.situacao}
+              onPressCancel={() => setShowModalCancel(true)}
+              onPressAppointment={() => setShowModalCancel(true)}
             />
           )
-      }
+        }
       />
+      {/* <ConteinerIconHomePatient>
+        <FontAwesome5 name="stethoscope" size={24} color="white" />
+      </ConteinerIconHomePatient> */}
 
-      <AppointmentCardPatient />
-
-      <Footer/>
-
+      <Footer />
     </Container>
   );
 };

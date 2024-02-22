@@ -75,14 +75,12 @@ export const ButtonHomePatientUnico = styled(Button)`
 
 ////////////////CancelationModal////////////////
 export const ButtonSecondary = styled(Button)`
-    background-color: transparent;
-    border: none;
+    
 `
 
 export const ButtonSecondarTitle = styled(ButtonTitle)`
     text-transform: capitalize;
-    text-decoration: underline;
-    color: #344f8f;
+    color: white;
     font-family: 'MontserratAlternates_600SemiBold';
     font-size: 14px;
 `
