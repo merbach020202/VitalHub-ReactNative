@@ -1,8 +1,8 @@
 import { AntDesign } from '@expo/vector-icons';
-import { ButtonCard, ButtonText, ClockCard, ContainerCard, ContainerCardList, ContentCard, DataProfileCard, ProfileData, ProfileImage, ProfileName, TextAge, TextBold, ViewRow } from './Style';
+import { ButtonCard, ButtonText, ClockCard, ContainerCardList, ContentCard, DataProfileCard, ProfileData, ProfileImage, ProfileName, TextAge, TextBold, ViewRow } from './Style';
 
 export const AppointmentCardDoctor = ({
-    situacao = "Pendente",
+    situacao = "Cancelado",
     onPressCancel,
     onPressAppointment,
 }) => {
@@ -35,7 +35,7 @@ export const AppointmentCardDoctor = ({
                             situacao == "Cancelado" ? (
                                 <>
                                 </>
-                            ) : situacao == "Pendente" ? (
+                            ) : situacao == "Cancelado" ? (
                                 <ButtonCard onPress={onPressCancel} >
                                     <ButtonText situacao={situacao}>Cancelar</ButtonText>
                                 </ButtonCard>
@@ -81,7 +81,7 @@ export const AppointmentCardDoctor = ({
                             situacao == "Cancelado" ? (
                                 <>
                                 </>
-                            ) : situacao == "Pendente" ? (
+                            ) : situacao == "Cancelado" ? (
                                 <ButtonCard onPress={onPressCancel} >
                                     <ButtonText situacao={situacao}>Cancelar</ButtonText>
                                 </ButtonCard>

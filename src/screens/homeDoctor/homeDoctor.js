@@ -15,6 +15,7 @@ import {
   import { useState } from "react";
   import { Footer } from "../../components/Footer/Footer";
 import CancelationModal from "../../components/CancelationModal/CancelationModal";
+import RecordModal from "../../components/RecordModal/RecordModal";
   
   const Consultas = [
     { id: 1, nome: "Carlos", situacao: "Pendente" },
@@ -59,7 +60,7 @@ import CancelationModal from "../../components/CancelationModal/CancelationModal
               <AppointmentCardDoctor
                 situacao={item.situacao}
                 onPressCancel={() => setShowModalCancel(true)}
-                onPressAppointment={() => setShowModalCancel(true)}
+                onPressAppointment={() => setShowModalAppointment(true)}
               />
             )
         }
@@ -68,6 +69,11 @@ import CancelationModal from "../../components/CancelationModal/CancelationModal
         <CancelationModal
             visible={showModalCancel}
             setShowModalCancel={setShowModalCancel}
+        />
+
+        <RecordModal
+            visible={showModalAppointment}
+            setShowModalAppointment={setShowModalAppointment}
         />
   
       <Footer/>

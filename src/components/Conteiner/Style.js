@@ -39,3 +39,7 @@ export const ContainerHeader = styled(LinearGradient).attrs({
 export const ButtonConteiner = styled.View`
     flex-direction: row;
 `
+
+export const PatientConteiner = styled.View`
+    height: 300px;
+`

@@ -10,7 +10,8 @@ export const Title = styled.Text`
 ////////////Profile////////////
 export const ProfileName = styled(Title)`
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: 'MontserratAlternates_600SemiBold';
 `
 ////////////HomePatient////////////
 export const TitleCard = styled(Title)`

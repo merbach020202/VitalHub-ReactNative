@@ -17,6 +17,7 @@ import { Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular } from
 import { Profile } from './src/screens/profile/profile';
 import { HomePatient } from './src/screens/homePatient/homePatient';
 import { HomeDoctor } from './src/screens/homeDoctor/homeDoctor';
+import { MedicalRecords, medicalRecords } from './src/screens/medicalRecords/medicalRecords';
 
 export default function App() {
 
@@ -116,6 +117,14 @@ export default function App() {
           component={HomeDoctor}
           // titulo da tela
           options={{title: 'HomeDoctor'}}
+        />
+        
+        <Stack.Screen
+          name='MedicalRecords'
+          // componente que será chamado
+          component={MedicalRecords}
+          // titulo da tela
+          options={{title: 'MedicalRecords'}}
         />
 
       </Stack.Navigator>

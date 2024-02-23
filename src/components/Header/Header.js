@@ -14,7 +14,7 @@ export const Header = () => {
 
                 <DataUser>
                     <TextDefault>Bem vindo</TextDefault>
-                    <NameUser>Eduardo M. Brenn</NameUser>
+                    <NameUser>Dr Cláudio</NameUser>
                 </DataUser> 
 
             </BoxUser>

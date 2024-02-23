@@ -35,9 +35,7 @@ export const ConteinerIconHomePatient = styled.View`
     justify-content: center;
     align-items: center;
 
-    align-self: flex-end;
-    margin-top: 580px;
-
-    position: absolute;
-    
+    position: fixed;
+    margin-top: 100px;
+    margin-left: 300px;    
 `

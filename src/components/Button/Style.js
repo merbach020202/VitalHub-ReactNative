@@ -13,8 +13,6 @@ export const Button = styled.TouchableOpacity`
     background-color: #496BBA;
     color: #496BBA;
     border-radius: 5px;
-
-    
 `
 
 /* Estilização diferenciada para colocar no Button */

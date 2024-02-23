@@ -2,6 +2,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { ButtonCard, ButtonText, ClockCard, ContainerCard, ContainerCardList, ContentCard, DataProfileCard, ProfileData, ProfileImage, ProfileName, TextAge, TextBold, ViewRow } from './Style';
 import { FontAwesome5 } from "@expo/vector-icons";
 import { ConteinerIconHomePatient } from '../ConteinerIcon/Style';
+import { PatientConteiner } from '../Conteiner/Style';
 
 export const AppointmentCardPatient = ({
     situacao = "Pendente",
@@ -10,7 +11,7 @@ export const AppointmentCardPatient = ({
 }) => {
     return(
         <>
-    
+        <PatientConteiner>
             <ContainerCardList>
 
                 <ProfileImage source={require("../../assets/MedicoImg.jpg")}/>
@@ -52,12 +53,13 @@ export const AppointmentCardPatient = ({
 
                 </ContentCard>
 
-                <ConteinerIconHomePatient>
-                    <FontAwesome5 name="stethoscope" size={24} color="white" />
-                </ConteinerIconHomePatient>
-
             </ContainerCardList>          
-
+            
+            <ConteinerIconHomePatient>
+                <FontAwesome5 name="stethoscope" size={24} color="white" />
+            </ConteinerIconHomePatient>
+            
+        </PatientConteiner>
         </>
     )
 }

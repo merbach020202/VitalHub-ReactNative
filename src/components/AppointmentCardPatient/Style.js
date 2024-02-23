@@ -1,15 +1,9 @@
 import styled from "styled-components";
 import { Title } from "../Title/Style";
 
-export const ContainerCard = styled.View`
- height: 300px;
-
- border: 1px solid red;
- justify-content: space-evenly;
-`
-
 export const ContainerCardList = styled.View`
     width: 90%;
+    height: 100px;
     flex-direction: row;
     gap: 10px;
     align-items: center;
@@ -21,7 +15,6 @@ export const ContainerCardList = styled.View`
 
     margin-top: 20px;
     margin-left: 20px;
-    border: 1px solid red;
 `
 
 export const ProfileImage = styled.Image`
@@ -87,7 +80,7 @@ export const ButtonCard = styled.TouchableOpacity`
 `
 
 export const ButtonText = styled.Text`
-    color: ${(props) => props.situacao == "Pendente" ? "#C81D25" : "#344F8F"};
+    color: ${(props) => props.situacao == "Pendente" ? "#C81D25" : "#344f8f"};
     font-family: 'MontserratAlternates_500Medium';
     font-size: 12px;
 `
