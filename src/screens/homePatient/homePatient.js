@@ -14,8 +14,10 @@ import { useState } from "react";
 import { Footer } from "../../components/Footer/Footer";
 import { AppointmentCardPatient } from "../../components/AppointmentCardPatient/AppointmentCardPatient";
 import { HeaderPatient } from "../../components/HeaderPatient/HeaderPatient";
+import CancelationModal from "../../components/CancelationModal/CancelationModal";
+import { ConteinerIconHomePatient, HoldConteiner } from "../../components/ConteinerIcon/Style";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { ConteinerIcon, ConteinerIconHomePatient } from "../../components/ConteinerIcon/Style";
+import IconMedicalModal from "../../components/IconMedicalModal/IconMedicalModal";
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "Pendente" },
@@ -28,6 +30,7 @@ const Consultas = [
 export const HomePatient = () => {
   const [statusList, setStatusList] = useState("Pendente");
   const [showModalCancel, setShowModalCancel] = useState(false);
+  const [showModalIconMedical, setShowModalIconMedical] = useState(false);
 
   return (
     <Container>
@@ -57,14 +60,29 @@ export const HomePatient = () => {
             <AppointmentCardPatient
               situacao={item.situacao}
               onPressCancel={() => setShowModalCancel(true)}
-              onPressAppointment={() => setShowModalCancel(true)}
+              onPressAppointmentCardPatient={() =>
+                setShowModalIconMedical(true)
+              }
             />
           )
         }
       />
-      {/* <ConteinerIconHomePatient>
-        <FontAwesome5 name="stethoscope" size={24} color="white" />
-      </ConteinerIconHomePatient> */}
+
+      <CancelationModal
+        visible={showModalCancel}
+        setShowModalCancel={setShowModalCancel}
+      />
+
+      <HoldConteiner>
+        <ConteinerIconHomePatient onPress={() => setShowModalIconMedical(true)}>
+          <FontAwesome5 name="stethoscope" size={24} color="white" />
+        </ConteinerIconHomePatient>
+      </HoldConteiner>
+
+      <IconMedicalModal
+        visible={showModalIconMedical}
+        setShowModalCancel={setShowModalIconMedical}
+      />
 
       <Footer />
     </Container>

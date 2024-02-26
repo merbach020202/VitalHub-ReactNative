@@ -34,7 +34,6 @@ export const ContainerHeader = styled(LinearGradient).attrs({
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 `
-
 ////////////////HomePatient////////////////
 export const ButtonConteiner = styled.View`
     flex-direction: row;

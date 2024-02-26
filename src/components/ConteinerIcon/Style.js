@@ -24,7 +24,7 @@ export const ConteinerIconHeader = styled.TouchableOpacity`
 `
 
 ///////////////HomePatient///////////////
-export const ConteinerIconHomePatient = styled.View`
+export const ConteinerIconHomePatient = styled.TouchableOpacity`
     width: 60px;
     height: 60px;
     
@@ -35,7 +35,11 @@ export const ConteinerIconHomePatient = styled.View`
     justify-content: center;
     align-items: center;
 
-    position: fixed;
-    margin-top: 100px;
-    margin-left: 300px;    
+    /* position: relative;
+    margin-top: 580px;
+    margin-left: 300px;     */
+`
+
+export const HoldConteiner = styled.View`
+    width: 100%;
 `
