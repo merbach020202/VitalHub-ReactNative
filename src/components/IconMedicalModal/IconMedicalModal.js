@@ -42,11 +42,11 @@ const IconMedicalModal = ({ visible, setShowModalCancel, ...rest }) => {
 
           </ConteinerInputMedical>
           
-          <TitleIconMedical2>Informe a localização desejada</TitleIconMedical2>
+          <TitleIconMedical2>Informe a cidade desejada</TitleIconMedical2>
           <ConteinerInputMedical>
 
             <ConteinerMedicalBox2>
-              <InputIconMedical2 placeholder={"Informe a localização"}/>
+              <InputIconMedical2 placeholder={"Informe a cidade"}/>
             </ConteinerMedicalBox2>
 
           </ConteinerInputMedical>

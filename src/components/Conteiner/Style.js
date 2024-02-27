@@ -42,3 +42,43 @@ export const ButtonConteiner = styled.View`
 export const PatientConteiner = styled.View`
     height: 300px;
 `
+
+////////////////ClinicSelection////////////////
+
+export const ConteinerText = styled.View`
+    width: 50%;
+    height: 100px;
+
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    padding-left: 20px;
+`
+
+export const ConteinerIcon = styled.View`
+    width: 50%;
+    height: 100px;
+
+    align-items: flex-end;
+    justify-content: space-around;
+
+    padding-right: 20px;
+`
+
+export const WeekDaysConteiner = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    background-color: #E8FCFD;
+
+    width: 100px;
+    height: 26px;
+`
+
+export const StarConteiner = styled.View`
+    flex-direction: row;
+    
+    width: 42px;
+    height: 20px;
+`

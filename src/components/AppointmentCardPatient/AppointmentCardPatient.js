@@ -20,9 +20,7 @@ export const AppointmentCardPatient = ({
   situacao = "Pendente",
   onPressCancel,
   onPressAppointment,
-  onPressAppointmentCardPatient,
 }) => {
-    const [showModalIconMedical, setShowModalIconMedical] = useState(false);
   return (
     <>
       <PatientConteiner>

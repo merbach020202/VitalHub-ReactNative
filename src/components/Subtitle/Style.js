@@ -27,7 +27,7 @@ export const SubTitleBox = styled.View`
 `
 
 export const SubTitleTextProfile = styled(SubTitleText)`
-    font-family: Quicksand_600SemiBold;
+    font-family: 'Quicksand_600SemiBold';
     color: black;
 
     text-align: start;
@@ -55,22 +55,21 @@ export const RightInput = styled.View`
 
 `
 
-///////////HomePatient///////////
+///////////ClinicSelection///////////
+export const BigSubTitle = styled.Text`
+    font-family: 'MontserratAlternates_600SemiBold';
+    font-size: 16px;
+`
 
+export const SmallSubTitle = styled.Text`
+    font-family: 'Quicksand_600SemiBold';
+    font-size: 14px;
+`
 
-// export const SubTitleTextHomePatient = styled(SubTitleText)`
-//     padding: 5px;
-//     margin-left: -10px;
-// `
+export const WeekDaysSubTitle = styled(SmallSubTitle)`
+    color: #49B3BA;
+`
 
-// export const SubTitleTextHomePatientDark = styled(SubTitleText)`
-//     font-family: 'Quicksand_600SemiBold';
-//     padding: 5px;
-
-//     align-self: flex-end;
-
-//     margin-top: -35px;
-//     margin-right: -20px;
-// `
-
-//////////Em cima é o que eu tinha feito anteriormente
+export const StarText = styled(SmallSubTitle)`
+    color: orange;
+`

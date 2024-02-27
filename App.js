@@ -18,6 +18,9 @@ import { Profile } from './src/screens/profile/profile';
 import { HomePatient } from './src/screens/homePatient/homePatient';
 import { HomeDoctor } from './src/screens/homeDoctor/homeDoctor';
 import { MedicalRecords, medicalRecords } from './src/screens/medicalRecords/medicalRecords';
+import { DateSelection } from './src/screens/dateSelection/dateSelection';
+import { ClinicSelection } from './src/screens/clinicSelection/clinicSelection';
+import { MedicalSelection } from './src/screens/medicalSelection/medicalSelection';
 
 export default function App() {
 
@@ -125,6 +128,30 @@ export default function App() {
           component={MedicalRecords}
           // titulo da tela
           options={{title: 'MedicalRecords'}}
+        />
+        
+        <Stack.Screen
+          name='ClinicSelection'
+          // componente que será chamado
+          component={ClinicSelection}
+          // titulo da tela
+          options={{title: 'ClinicSelection'}}
+        />
+        
+        <Stack.Screen
+          name='MedicalSelection'
+          // componente que será chamado
+          component={MedicalSelection}
+          // titulo da tela
+          options={{title: 'MedicalSelection'}}
+        />
+        
+        <Stack.Screen
+          name='DateSelection'
+          // componente que será chamado
+          component={DateSelection}
+          // titulo da tela
+          options={{title: 'DateSelection'}}
         />
 
       </Stack.Navigator>

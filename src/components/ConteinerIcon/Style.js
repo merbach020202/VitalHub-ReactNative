@@ -42,4 +42,11 @@ export const ConteinerIconHomePatient = styled.TouchableOpacity`
 
 export const HoldConteiner = styled.View`
     width: 100%;
+    height: 20%;
+
+    align-items: flex-end;
+
+    padding-right: 20px;
+
+    position: fixed;
 `

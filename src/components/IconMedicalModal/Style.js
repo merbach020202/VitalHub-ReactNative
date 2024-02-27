@@ -101,7 +101,7 @@ export const ButtonTitleIconMedical = styled.Text`
 
 export const TitleIconMedical2 = styled(TitleIconMedical)`
   margin-top: 15px;
-  margin-left: -65px;
+  margin-left: -90px;
 `;
 
 export const ContentAccount = styled.Text`

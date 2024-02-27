@@ -19,3 +19,13 @@ export const TitleCard = styled(Title)`
 
     margin-left: 25px;
 `
+////////////ClinicSelection////////////
+export const TitleClinic = styled(ProfileName)`
+    position: fixed;
+
+    width: 100%;
+    height: 140px;
+
+    padding-top: 70px;
+    padding-left: 95px;
+`
