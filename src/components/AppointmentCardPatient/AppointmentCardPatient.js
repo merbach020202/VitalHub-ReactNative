@@ -14,7 +14,6 @@ import {
   ViewRow,
 } from "./Style";
 import { PatientConteiner } from "../Conteiner/Style";
-import { useState } from "react";
 
 export const AppointmentCardPatient = ({
   situacao = "Pendente",

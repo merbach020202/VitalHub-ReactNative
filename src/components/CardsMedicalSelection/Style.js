@@ -20,28 +20,43 @@ export const ConteinerCard = styled.View`
     width: 100%;
     
     align-items: center;
+    justify-content: center;
+`
+
+export const ConteinerImage = styled.View`
+    width: 30%;
+    height: 100px;
+    
+    align-items: center;
+    justify-content: center;
+`
+
+export const DoctorImage = styled.Image`
+    width: 77px;
+    height: 80px;
+
+    border-radius: 5px;
 `
 
 export const Card = styled.View`
     flex-direction: row;
     width: 90%;
     height: 100px;
-    justify-self: flex-start;
 
     margin-top: 12px;
 
     border-radius: 3px;
-    elevation: 3px;
+    elevation: 1px;
 `
 
 export const ConteinerText = styled.View`
-    width: 50%;
+    width: 70%;
     height: 100px;
 
     align-items: flex-start;
     justify-content: space-evenly;
 
-    padding-left: 20px;
+    padding: 10px;
 `
 
 export const BigSubTitle = styled.Text`
@@ -50,8 +65,9 @@ export const BigSubTitle = styled.Text`
 `
 
 export const SmallSubTitle = styled.Text`
-    font-family: 'Quicksand_600SemiBold';
+    font-family: 'Quicksand_500Medium';
     font-size: 14px;
+    color: #8C8A97;
 `
 export const ConteinerIcon = styled.View`
     width: 50%;
@@ -74,20 +90,6 @@ export const StarText = styled(SmallSubTitle)`
     color: orange;
 `
 
-export const WeekDaysSubTitle = styled(SmallSubTitle)`
-    color: #49B3BA;
-`
-
-export const WeekDaysConteiner = styled.View`
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    
-    background-color: #E8FCFD;
-
-    width: 100px;
-    height: 26px;
-`
 export const ButtonSecondaryIconMedical = styled.TouchableOpacity`
   width: 100%;
   height: 53px;

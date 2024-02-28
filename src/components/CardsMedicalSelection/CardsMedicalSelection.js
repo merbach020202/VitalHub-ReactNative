@@ -1,39 +1,41 @@
 import { Container } from "../Conteiner/Style";
 import {
   BigSubTitle,
-  ButtonCard,
   ButtonSecondaryIconMedical,
-  ButtonText,
   ButtonTitleIconMedical,
   Card,
   ConteinerButton,
   ConteinerCard,
   ConteinerIcon,
+  ConteinerImage,
   ConteinerText,
   ContentAccount,
+  DoctorImage,
   SmallSubTitle,
   StarConteiner,
   StarText,
   TextLink,
   TitleClinic,
-  WeekDaysConteiner,
-  WeekDaysSubTitle,
 } from "./Style";
 
 import { AntDesign } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
 
-export const CardsClinicSelection = () => {
+export const CardsMedicalSelection = () => {
   return (
     <Container>
-      <TitleClinic>Selecionar Clínica</TitleClinic>
+      <TitleClinic>Selecionar Médico</TitleClinic>
 
       <ConteinerCard>
 
         <Card>
+
+          <ConteinerImage>
+            <DoctorImage source={require("../../assets/MedicoImg.jpg")} />
+          </ConteinerImage>
+
           <ConteinerText>
-            <BigSubTitle>Clínica Natureh</BigSubTitle>
-            <SmallSubTitle>São Paulo, SP</SmallSubTitle>
+            <BigSubTitle>Dr Alessandro</BigSubTitle>
+            <SmallSubTitle>Demartologia, Estetcista</SmallSubTitle>
           </ConteinerText>
 
           <ConteinerIcon>
@@ -41,18 +43,19 @@ export const CardsClinicSelection = () => {
               <AntDesign name="star" size={24} color="orange" />
               <StarText>4,5</StarText>
             </StarConteiner>
-
-            <WeekDaysConteiner>
-              <FontAwesome5 name="calendar-day" size={14} color="#49B3BA" />
-              <WeekDaysSubTitle>Seg-Sex</WeekDaysSubTitle>
-            </WeekDaysConteiner>
           </ConteinerIcon>
+
         </Card>
 
         <Card>
+
+          <ConteinerImage>
+            <DoctorImage source={require("../../assets/MedicoImg.jpg")} />
+          </ConteinerImage>
+
           <ConteinerText>
-            <BigSubTitle>Clínica Natureh</BigSubTitle>
-            <SmallSubTitle>São Paulo, SP</SmallSubTitle>
+            <BigSubTitle>Dr Alessandro</BigSubTitle>
+            <SmallSubTitle>Demartologia, Estetcista</SmallSubTitle>
           </ConteinerText>
 
           <ConteinerIcon>
@@ -60,18 +63,19 @@ export const CardsClinicSelection = () => {
               <AntDesign name="star" size={24} color="orange" />
               <StarText>4,5</StarText>
             </StarConteiner>
-
-            <WeekDaysConteiner>
-              <FontAwesome5 name="calendar-day" size={14} color="#49B3BA" />
-              <WeekDaysSubTitle>Seg-Sex</WeekDaysSubTitle>
-            </WeekDaysConteiner>
           </ConteinerIcon>
+
         </Card>
 
         <Card>
+
+          <ConteinerImage>
+            <DoctorImage source={require("../../assets/Medico(Alessandra).png")} />
+          </ConteinerImage>
+
           <ConteinerText>
-            <BigSubTitle>Clínica Natureh</BigSubTitle>
-            <SmallSubTitle>São Paulo, SP</SmallSubTitle>
+            <BigSubTitle>Dra Alessandra</BigSubTitle>
+            <SmallSubTitle>Demartologia, Estetcista</SmallSubTitle>
           </ConteinerText>
 
           <ConteinerIcon>
@@ -79,12 +83,8 @@ export const CardsClinicSelection = () => {
               <AntDesign name="star" size={24} color="orange" />
               <StarText>4,5</StarText>
             </StarConteiner>
-
-            <WeekDaysConteiner>
-              <FontAwesome5 name="calendar-day" size={14} color="#49B3BA" />
-              <WeekDaysSubTitle>Seg-Sex</WeekDaysSubTitle>
-            </WeekDaysConteiner>
           </ConteinerIcon>
+
         </Card>
 
       </ConteinerCard>
@@ -98,7 +98,7 @@ export const CardsClinicSelection = () => {
         <ContentAccount>
           <TextLink>Cancelar</TextLink>
         </ContentAccount>
-        
+
       </ConteinerButton>
     </Container>
   );
