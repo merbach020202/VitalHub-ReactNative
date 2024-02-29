@@ -17,10 +17,11 @@ import { Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular } from
 import { Profile } from './src/screens/profile/profile';
 import { HomePatient } from './src/screens/homePatient/homePatient';
 import { HomeDoctor } from './src/screens/homeDoctor/homeDoctor';
-import { MedicalRecords, medicalRecords } from './src/screens/medicalRecords/medicalRecords';
-import { DateSelection } from './src/screens/dateSelection/dateSelection';
+import { MedicalRecords } from './src/screens/medicalRecords/medicalRecords';
+
 import { ClinicSelection } from './src/screens/clinicSelection/clinicSelection';
 import { MedicalSelection } from './src/screens/medicalSelection/medicalSelection';
+import DateSelection from './src/screens/dateSelection/dateSelection';
 
 export default function App() {
 
