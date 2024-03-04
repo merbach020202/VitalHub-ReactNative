@@ -88,7 +88,7 @@ export const CardsClinicSelection = () => {
         </Card>
 
       </ConteinerCard>
-
+      
       <ConteinerButton>
 
         <ButtonSecondaryIconMedical>

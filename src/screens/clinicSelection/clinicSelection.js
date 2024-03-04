@@ -24,10 +24,7 @@ export const ClinicSelection = () => {
         renderItem={({ item }) =>
           statusList == item.situacao && <CardsClinicSelection />
         }
-      />
-
-      
-      
+      />     
 
     </Container>
   );

@@ -22,6 +22,7 @@ import { MedicalRecords } from './src/screens/medicalRecords/medicalRecords';
 import { ClinicSelection } from './src/screens/clinicSelection/clinicSelection';
 import { MedicalSelection } from './src/screens/medicalSelection/medicalSelection';
 import DateSelection from './src/screens/dateSelection/dateSelection';
+import { ClinicAppointment } from './src/components/ClinicAppointment/ClinicAppointment';
 
 export default function App() {
 
@@ -153,6 +154,14 @@ export default function App() {
           component={DateSelection}
           // titulo da tela
           options={{title: 'DateSelection'}}
+        />
+        
+        <Stack.Screen
+          name='ModalAppointment'
+          // componente que será chamado
+          component={ClinicAppointment}
+          // titulo da tela
+          options={{title: 'ModalAppointment'}}
         />
 
       </Stack.Navigator>

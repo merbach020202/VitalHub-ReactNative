@@ -36,7 +36,7 @@ import RecordModal from "../../components/RecordModal/RecordModal";
         <Header />
   
         <CalendarList />
-  
+
         <ButtonConteiner>
           <ButtonHomePatientUnico clickButton={statusList === "Pendente"}>
             <ButtonTitle>Agendadas</ButtonTitle>
