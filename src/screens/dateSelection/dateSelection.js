@@ -3,16 +3,33 @@ import React, { useState } from "react";
 import { Calendar, LocaleConfig } from "react-native-calendars";
 
 import { Container } from "../../components/Conteiner/Style";
-import { ButtonSecondaryIconMedical, ButtonTitleIconMedical, ConteinerBottom, ConteinerButton, ConteinerIcon, ContentAccount, InputBox, InputCalendar, Label, TextLink, TitleCalendar } from "./Style";
+import {
+  ButtonSecondaryIconMedical,
+  ButtonTitleIconMedical,
+  ConteinerBottom,
+  ConteinerButton,
+  ConteinerIcon,
+  ContentAccount,
+  InputBox,
+  InputCalendar,
+  Label,
+  TextLink,
+  TitleCalendar,
+} from "./Style";
 
-import { Octicons } from '@expo/vector-icons';
+import { Octicons } from "@expo/vector-icons";
 import { ScrollView } from "react-native";
-import { useFonts, MontserratAlternates_600SemiBold, Quicksand_600SemiBold } from "expo-font";
+import {
+  useFonts,
+  MontserratAlternates_600SemiBold,
+  Quicksand_600SemiBold,
+} from "expo-font";
 import moment from "moment";
-import { ClinicAppointment } from "../../components/ClinicAppointment/ClinicAppointment";
+import { ClinicAppointment } from "../../components/ClinicAppointment/ClinicAppointment"; 
 
-const DateSelection = () => {
+export const DateSelection = () => {
   const [selectDate, setSelectDate] = useState("");
+  const [ClinicAppointment2, setClinicAppointment2] = useState(false);
 
   const handleDatePress = (date) => {
     setSelectDate(date);
@@ -26,13 +43,13 @@ const DateSelection = () => {
     },
   };
 
-  const[fontsLoaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     MontserratAlternates_600SemiBold,
     Quicksand_600SemiBold,
-  })
+  });
 
   if (!fontsLoaded) {
-    return null
+    return null;
   }
 
   LocaleConfig.locales["pt-br"] = {
@@ -102,7 +119,12 @@ const DateSelection = () => {
         {/* <CalendarHeader> */}
 
         <Calendar
-          style={{ width: 365, height: 100, backgroundColor: "transparent", alignSelf: "center"}}
+          style={{
+            width: 365,
+            height: 100,
+            backgroundColor: "transparent",
+            alignSelf: "center",
+          }}
           initialDate="2024-03-01"
           minDate="2024-01-01"
           maxDate="2024-12-31"
@@ -118,46 +140,49 @@ const DateSelection = () => {
 
             textDayFontFamily: "Quicksand_600SemiBold",
             textMonthFontFamily: "MontserratAlternates_600SemiBold",
-            textDayHeaderFontFamily: "Quicksand_600SemiBold",           
+            textDayHeaderFontFamily: "Quicksand_600SemiBold",
           }}
-          
-          monthFormat={'MMMM yyyy'}
+          monthFormat={"MMMM yyyy"}
         />
-      {/* </CalendarHeader> */}
+        {/* </CalendarHeader> */}
 
-      <ConteinerBottom>
+        <ConteinerBottom>
 
-        <Label>Selecione um horário disponível</Label>
+          <Label>Selecione um horário disponível</Label>
 
-        <InputBox>
-          <InputCalendar placeholder="Selecionar horário"></InputCalendar>
+          <InputBox>
 
-        <ConteinerIcon>
-          <Octicons name="triangle-down" size={24} color="#34898F" />
-        </ConteinerIcon>
+            <InputCalendar placeholder="Selecionar horário"></InputCalendar>
+
+            <ConteinerIcon>
+              <Octicons name="triangle-down" size={24} color="#34898F" />
+            </ConteinerIcon>
+
+          </InputBox>
+
           
-        </InputBox>
 
-        <ConteinerButton>
+          <ConteinerButton>
 
-          <ButtonSecondaryIconMedical>
-            <ButtonTitleIconMedical>CONFIRMAR</ButtonTitleIconMedical>
-          </ButtonSecondaryIconMedical>
+            <ButtonSecondaryIconMedical onPress={() => setClinicAppointment2(true)}>
+              <ButtonTitleIconMedical>CONFIRMAR</ButtonTitleIconMedical>
+            </ButtonSecondaryIconMedical>
 
-          <ContentAccount>
-            <TextLink>Cancelar</TextLink>
-          </ContentAccount>
-        
-      </ConteinerButton>
+              <ClinicAppointment
+                visible={ClinicAppointment2}
+                setClinicAppointment2={setClinicAppointment2}
+              />
 
-      </ConteinerBottom>
+            <ContentAccount>
+              <TextLink>Cancelar</TextLink>
+            </ContentAccount>
 
-      <ClinicAppointment
-      
-      />
+          </ConteinerButton>
+
+        </ConteinerBottom>
 
       </ScrollView>
-
+      
     </Container>
   );
 };

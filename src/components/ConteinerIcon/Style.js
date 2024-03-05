@@ -45,6 +45,7 @@ export const HoldConteiner = styled.View`
     height: 20%;
 
     align-items: flex-end;
+    margin-bottom: -50px;
 
     padding-right: 20px;
 

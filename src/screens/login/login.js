@@ -9,7 +9,13 @@ import { Button, ButtonGoogle, ButtonTitleGoogle, ImageGoogle } from "../../comp
 
 import { AntDesign } from '@expo/vector-icons';
 
-export const Login = ({ login }) => {
+export const Login = ({ navigation }) => {
+
+  // Chama a função de login
+  async function Login() {
+    navigation.navigate("Main")
+  }
+
   return (
     <Container>
 
@@ -25,7 +31,7 @@ export const Login = ({ login }) => {
 
        <LinkMedium>Esqueceu sua senha?</LinkMedium>
 
-           <Button>
+           <Button onPress={() => Login}>
                 <ButtonTitle>Entrar</ButtonTitle>
             </Button>
 
