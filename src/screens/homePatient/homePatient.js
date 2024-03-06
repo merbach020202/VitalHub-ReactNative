@@ -1,9 +1,7 @@
 import {
-  ButtonHomePatient,
-  ButtonHomePatientUnico,
+  ButtonHomePatient
 } from "../../components/Button/Style";
 import {
-  ButtonTitle,
   ButtonTitleHomePatient,
 } from "../../components/ButtonTitle/Style";
 import { ButtonConteiner, Container } from "../../components/Conteiner/Style";
@@ -39,16 +37,32 @@ export const HomePatient = () => {
       <CalendarList />
 
       <ButtonConteiner>
-        <ButtonHomePatientUnico clickButton={statusList === "Pendente"}>
-          <ButtonTitle>Agendadas</ButtonTitle>
-        </ButtonHomePatientUnico>
 
-        <ButtonHomePatient clickButton={statusList === "Realizado"}>
-          <ButtonTitleHomePatient>Realizadas</ButtonTitleHomePatient>
+        <ButtonHomePatient 
+          clickButton={statusList === "Pendente"} 
+          textButton={"Pendente"} 
+          onPress={() => {setStatusList("Pendente")}}
+        >
+          <ButtonTitleHomePatient 
+            clickButton={ statusList === "Pendente"}>Agendadas
+          </ButtonTitleHomePatient>
+
         </ButtonHomePatient>
 
-        <ButtonHomePatient clickButton={statusList === "Cancelado"}>
-          <ButtonTitleHomePatient>Canceladas</ButtonTitleHomePatient>
+        <ButtonHomePatient 
+          clickButton={statusList === "Realizado"} 
+          textButton={"Realizado"}  
+          onPress={() => {setStatusList("Realizado")}}>
+
+          <ButtonTitleHomePatient
+            clickButton={ statusList === "Realizado"}>Realizadas
+          </ButtonTitleHomePatient>
+        </ButtonHomePatient>
+
+        <ButtonHomePatient clickButton={statusList === "Cancelado"} textButton={"Cancelado"}  onPress={() => {setStatusList("Cancelado")}}>
+          <ButtonTitleHomePatient
+            clickButton={ statusList === "Cancelado"}>Canceladas
+          </ButtonTitleHomePatient>
         </ButtonHomePatient>
       </ButtonConteiner>
 
@@ -60,8 +74,8 @@ export const HomePatient = () => {
             <AppointmentCardPatient
               situacao={item.situacao}
               onPressCancel={() => setShowModalCancel(true)}
-              onPressAppointmentCardPatient={() =>
-                setShowModalIconMedical(true)
+              onPressAppointmentCardPatient={() => setShowModalIconMedical(true)
+                // Aqui vem o modal do medico
               }
             />
           )

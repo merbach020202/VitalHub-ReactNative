@@ -11,11 +11,16 @@ import { AntDesign } from '@expo/vector-icons';
 import { ConteinerIcon } from "../../components/ConteinerIcon/Style"
 
 
-export const NewPassword = ({newPassword}) => {
+export const NewPassword = ({ navigation }) => {
+
+    async function Login() {
+        navigation.navigate("Login")
+    }
+
     return (
     <Container>
 
-        <ConteinerIcon>
+        <ConteinerIcon onPress={() => Login()}>
             <AntDesign name="closecircleo" size={28} color="#49B3BA" />
         </ConteinerIcon>
 
@@ -32,7 +37,7 @@ export const NewPassword = ({newPassword}) => {
             placeholder="Confirmar nova senha" 
             secureTextEntry/>
 
-        <PasswordButton>
+        <PasswordButton onPress={() => Login()}>
             <ButtonTitle>Entrar</ButtonTitle>
         </PasswordButton>
             

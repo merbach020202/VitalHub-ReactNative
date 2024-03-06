@@ -12,11 +12,20 @@ import { AntDesign } from '@expo/vector-icons';
 import { ContentAccount, TextAccount, TextAccountEmailCode } from "../../components/Links/Style"
 
 
-export const EmailCode = ({emailCode}) => {
+export const EmailCode = ({ navigation }) => {
+
+    async function Login () {
+        navigation.navigate("Login")
+    }
+
+    async function NewPassword () {
+        navigation.navigate("NewPassword")
+    }
+
     return (
         <Container>
 
-            <ConteinerIcon>
+            <ConteinerIcon onPress={() => Login()}>
                 <AntDesign name="closecircleo" size={28} color="#49B3BA" />
             </ConteinerIcon>
             
@@ -36,7 +45,7 @@ export const EmailCode = ({emailCode}) => {
             </ManyInputs>
             
 
-            <ButtonContinue>
+            <ButtonContinue  onPress={() => NewPassword()}>
                 <ButtonTitle>Entrar</ButtonTitle>
             </ButtonContinue>
 

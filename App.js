@@ -54,6 +54,14 @@ export default function App() {
 
         {/*  */}
         <Stack.Screen
+          name='Login'
+          // componente que será chamado
+          component={Login}
+          // titulo da tela
+          options={{title: 'Login'}}
+        />
+        
+        <Stack.Screen
           name='Main'
           // componente que será chamado
           component={Main}
@@ -69,13 +77,6 @@ export default function App() {
           options={{title: 'Navegacao'}}
         />
         
-        <Stack.Screen
-          name='Login'
-          // componente que será chamado
-          component={Login}
-          // titulo da tela
-          options={{title: 'Login'}}
-        />
         
         <Stack.Screen
           name='ForgotPassword'
@@ -163,14 +164,6 @@ export default function App() {
           component={DateSelection}
           // titulo da tela
           options={{title: 'DateSelection'}}
-        />
-        
-        <Stack.Screen
-          name='ModalAppointment'
-          // componente que será chamado
-          component={ClinicAppointment}
-          // titulo da tela
-          options={{title: 'ModalAppointment'}}
         />
 
       </Stack.Navigator>

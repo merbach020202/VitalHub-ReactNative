@@ -65,11 +65,6 @@ export const Navigation = ({navigation}) => {
                 onPress={() => navigation.navigate("DateSelection")}
             />
 
-            <Button
-                title="ModalAppointment"
-                onPress={() => navigation.navigate("ModalAppointment")}
-            />
-
             </ConteinerNav>
             
         </View>

@@ -12,14 +12,23 @@ import { Entypo } from '@expo/vector-icons';
 import { ConteinerIcon, Icons } from "../../components/ConteinerIcon/Style"
 
 
-export const ForgotPassword = ({forgotPassword}) => {
+export const ForgotPassword = ({ navigation }) => {
+
+    async function EmailCode() {
+        navigation.navigate("EmailCode")
+      }
+
+      async function Login() {
+        navigation.navigate("Login")
+      }
+
     return (
         // <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
         //     <Text>Esqueci minha senha</Text>
         // </View>
         <Container>
             
-            <ConteinerIcon>
+            <ConteinerIcon onPress={() => Login()}>
                 <Entypo name="arrow-with-circle-left" size={28} color="#49B3BA" />
             </ConteinerIcon>
             <Logo source={require("../../assets/VitalHub_Logo 1.png")} />
@@ -31,7 +40,7 @@ export const ForgotPassword = ({forgotPassword}) => {
 
             <Input placeholder="Usuário ou  Email" />
 
-            <ButtonContinue>
+            <ButtonContinue onPress={() => EmailCode()}>
                 <ButtonTitle>Continuar</ButtonTitle>
             </ButtonContinue>   
 

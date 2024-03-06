@@ -16,7 +16,8 @@ export const LinkMedium = styled.Text`
 ////////////////////////Tudo pertence ao Content Account////////////////////////
 
 export const TextLink = styled(LinkMedium)`
-    color: #344F8F;
+    color: #4E4B59;
+    text-decoration: none;
 `
 
 export const ContentAccount = styled.Text`

@@ -1,3 +1,5 @@
+import { ContentIcon, TextIcon } from './Style'
+
 // Importar o recurso do bottom tabs
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { HomePatient } from "../../screens/homePatient/homePatient"
@@ -24,9 +26,25 @@ export const Main = () => {
 
                     if ( route.name === "Home" ) {
                         return (
-                            <>
-                                
-                            </>
+                            <ContentIcon
+                                tabBarActiveBackgroundColor={ focused ? "#ECF2FF" : "transparent" }
+                            >
+
+                                <FontAwesome name='calendar' size={22} color="#4E4B59" />
+                                { focused && <TextIcon>Agenda</TextIcon> }
+
+                            </ContentIcon>
+                        )
+                    } else {
+                        return (
+                            <ContentIcon
+                                tabBarActiveBackgroundColor={ focused ? "#ECF2FF" : "transparent" }
+                            >
+
+                                <FontAwesome5 name="user" size={22} color="black" />
+                                { focused && <TextIcon>Perfil</TextIcon> }
+
+                            </ContentIcon>
                         )
                     }
 
@@ -35,13 +53,13 @@ export const Main = () => {
         >
             
             <BottomTab.Screen
-                name="HomePatient"
+                name="Home"
                 component={HomePatient}
             />
             
             <BottomTab.Screen
-                name="Home"
-                component={HomeDoctor}
+                name="HomePatient"
+                component={HomePatient}
             />
             
         </BottomTab.Navigator>

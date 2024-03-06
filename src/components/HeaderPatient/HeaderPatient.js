@@ -4,10 +4,15 @@ import { BoxUser, DataUser, ImageUser, NameUser, TextDefault } from "./Style"
 import { Ionicons } from '@expo/vector-icons';
 
 export const HeaderPatient = () => {
+
+    async function Profile() {
+        navigator.navigation("Profile")
+    }
+
     return (
 
         <ContainerHeader>
-            <BoxUser>
+            <BoxUser onPress={() => Profile()}>
                  <ImageUser
                     source={require("../../assets/ImgHeader.jpg")}
                  />

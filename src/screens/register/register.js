@@ -9,7 +9,16 @@ import { ButtonTitle } from "../../components/ButtonTitle/Style"
 import { ContentAccount, TextAccount } from "../../components/Links/Style"
 
 
-export const Register = ({register}) => {
+export const Register = ({ navigation }) => {
+
+    async function Login() {
+        navigation.replace("Login")
+    }
+
+    async function HomePatient() {
+        navigation.replace("Main")
+    }
+
     return (
         <Container>
 
@@ -29,11 +38,11 @@ export const Register = ({register}) => {
             placeholder="Confirmar Senha" 
             secureTextEntry/>
 
-        <PasswordButton>
+        <PasswordButton onPress={() => HomePatient()}>
             <ButtonTitle>Cadastrar</ButtonTitle>
         </PasswordButton>
 
-        <ContentAccount>
+        <ContentAccount onPress={() => Login()}>
                 <TextAccount>Cancelar</TextAccount>
         </ContentAccount>
             

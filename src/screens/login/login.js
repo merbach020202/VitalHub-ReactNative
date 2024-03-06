@@ -12,8 +12,17 @@ import { AntDesign } from '@expo/vector-icons';
 export const Login = ({ navigation }) => {
 
   // Chama a função de login
+
   async function Login() {
-    navigation.navigate("Main")
+    navigation.navigate("Main") // Aqui quando eu quiser que a main n volte para a login, basta colocar .replace, ao inves de .navigate
+  }
+
+  async function ForgotPassword() {
+    navigation.navigate("ForgotPassword")
+  }
+
+  async function Register() {
+    navigation.replace("Register")
   }
 
   return (
@@ -29,9 +38,9 @@ export const Login = ({ navigation }) => {
         placeholder="Digite sua Senha" 
         secureTextEntry/>
 
-       <LinkMedium>Esqueceu sua senha?</LinkMedium>
+       <LinkMedium onPress={() => ForgotPassword()}>Esqueceu sua senha?</LinkMedium>
 
-           <Button onPress={() => Login}>
+           <Button onPress={() => Login()}>
                 <ButtonTitle>Entrar</ButtonTitle>
             </Button>
 
@@ -41,7 +50,7 @@ export const Login = ({ navigation }) => {
                 <ButtonTitleGoogle>Entrar com google</ButtonTitleGoogle>
             </ButtonGoogle>
 
-            <ContentAccount>
+            <ContentAccount onPress={() => Register()}>
                 <TextLink>Não tem conta?</TextLink>
                 <TextAccount>Crie uma agora!</TextAccount>
             </ContentAccount>
