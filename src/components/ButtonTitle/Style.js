@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 
 export const ButtonTitle = styled.Text`
     font-family: 'MontserratAlternates_700Bold';
-    font-size: 12px;
-    color: #496BBA;
+    font-size: 14px;
+    color: white;
     `
     /* Estilização de texto diferenciada para colocar no buttonTitle */
 

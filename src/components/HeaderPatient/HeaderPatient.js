@@ -1,12 +1,12 @@
 import { ContainerHeader } from "../Conteiner/Style"
 import { ConteinerIconHeader } from "../ConteinerIcon/Style";
-import { BoxUser, DataUser, ImageUser, NameUser, TextDefault } from "./Style"
+import { BoxUser, ConteinerIcon, DataUser, ImageUser, NameUser, TextDefault } from "./Style"
 import { Ionicons } from '@expo/vector-icons';
 
-export const HeaderPatient = () => {
+export const HeaderPatient = ({ navigation }) => {
 
     async function Profile() {
-        navigator.navigation("Profile")
+        navigation.navigate("Profile")
     }
 
     return (
@@ -24,9 +24,9 @@ export const HeaderPatient = () => {
 
             </BoxUser>
                 
-            <ConteinerIconHeader>
+            <ConteinerIcon>
                 <Ionicons name="notifications" size={24} color="white" />
-            </ConteinerIconHeader>
+            </ConteinerIcon>
 
         </ContainerHeader>
         

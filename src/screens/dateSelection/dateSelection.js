@@ -19,22 +19,17 @@ import {
 
 import { Octicons } from "@expo/vector-icons";
 import { ScrollView } from "react-native";
-import {
-  useFonts,
-  MontserratAlternates_600SemiBold,
-  Quicksand_600SemiBold,
-} from "expo-font";
-import moment from "moment";
+import { useFonts, MontserratAlternates_600SemiBold, Quicksand_600SemiBold,} from "expo-font";
 import { ClinicAppointment } from "../../components/ClinicAppointment/ClinicAppointment"; 
 
-export const DateSelection = () => {
+export const DateSelection = ({ navigation }) => {
   const [selectDate, setSelectDate] = useState("");
   const [ClinicAppointment2, setClinicAppointment2] = useState(false);
-
+  
   const handleDatePress = (date) => {
     setSelectDate(date);
   };
-
+  
   const markedDates = {
     [selectDate]: {
       selected: true,
@@ -42,15 +37,16 @@ export const DateSelection = () => {
       dotColor: "#60BFC5",
     },
   };
-
+  
   const [fontsLoaded] = useFonts({
     MontserratAlternates_600SemiBold,
     Quicksand_600SemiBold,
   });
-
+  
   if (!fontsLoaded) {
     return null;
   }
+  
 
   LocaleConfig.locales["pt-br"] = {
     monthNames: [
@@ -161,7 +157,6 @@ export const DateSelection = () => {
           </InputBox>
 
           
-
           <ConteinerButton>
 
             <ButtonSecondaryIconMedical onPress={() => setClinicAppointment2(true)}>
@@ -171,9 +166,10 @@ export const DateSelection = () => {
               <ClinicAppointment
                 visible={ClinicAppointment2}
                 setClinicAppointment2={setClinicAppointment2}
+                navigation={navigation}
               />
 
-            <ContentAccount>
+            <ContentAccount onPress={() => navigation.replace("HomePatient")}>
               <TextLink>Cancelar</TextLink>
             </ContentAccount>
 

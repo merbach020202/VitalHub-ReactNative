@@ -3,15 +3,16 @@ import { ContentIcon, TextIcon } from './Style'
 // Importar o recurso do bottom tabs
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { HomePatient } from "../../screens/homePatient/homePatient"
-import { HomeDoctor } from "../homeDoctor/homeDoctor"
-import { Login } from "../login/login"
+import { Profile } from "../../screens/profile/profile"
+
 
 // Aqui, uma variável vai receber o createBottomTabNavigator
 const BottomTab = createBottomTabNavigator()
 
 import { FontAwesome, FontAwesome5 } from "@expo/vector-icons"
 
-export const Main = () => {
+export const Main = ({ navigation }) => {
+
     return (
         <BottomTab.Navigator
             initialRouteName="Home"
@@ -58,8 +59,8 @@ export const Main = () => {
             />
             
             <BottomTab.Screen
-                name="HomePatient"
-                component={HomePatient}
+                name="Profile"
+                component={Profile}
             />
             
         </BottomTab.Navigator>

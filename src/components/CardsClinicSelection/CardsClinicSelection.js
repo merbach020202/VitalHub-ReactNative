@@ -23,7 +23,12 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 
-export const CardsClinicSelection = () => {
+export const CardsClinicSelection = ({ navigation }) => {
+
+  async function MedicalSelection() {
+    navigation.navigate("MedicalSelection")
+  }
+
   return (
     <Container>
       <TitleClinic>Selecionar Clínica</TitleClinic>
@@ -91,11 +96,11 @@ export const CardsClinicSelection = () => {
       
       <ConteinerButton>
 
-        <ButtonSecondaryIconMedical>
+        <ButtonSecondaryIconMedical onPress={() => MedicalSelection()}>
           <ButtonTitleIconMedical>CONFIRMAR</ButtonTitleIconMedical>
         </ButtonSecondaryIconMedical>
 
-        <ContentAccount>
+        <ContentAccount onPress={() => navigation.replace("Main")}>
           <TextLink>Cancelar</TextLink>
         </ContentAccount>
         

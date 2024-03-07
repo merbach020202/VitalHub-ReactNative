@@ -13,7 +13,7 @@ const Consultas = [
   { id: 5, nome: "Carlos", situacao: "Cancelado" },
 ];
 
-export const MedicalSelection = () => {
+export const MedicalSelection = ({ navigation }) => {
   const [statusList, setStatusList] = useState("Pendente");
   return (
     <Container>
@@ -22,7 +22,7 @@ export const MedicalSelection = () => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) =>
           statusList == item.situacao && (
-            <CardsMedicalSelection
+            <CardsMedicalSelection navigation={navigation}
             />
           )
         }

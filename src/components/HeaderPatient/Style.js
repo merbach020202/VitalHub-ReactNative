@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export const BoxUser = styled.View`
+export const BoxUser = styled.TouchableOpacity.attrs({
+    activeOpacity : 1
+})`
     flex-direction: row;
     margin-top: 55px;
     margin-left: 20px;
+
+    width: 300px;
 `
 
 export const ImageUser = styled.Image`
@@ -35,4 +39,16 @@ export const ImageUserHomePatient = styled.Image`
     border-radius: 5px;
 
     margin-left: -120px;
+`
+
+export const ConteinerIcon = styled.TouchableOpacity`
+    /* flex-direction: row;
+    margin-top: 30px;
+    margin-right: 20px; */
+    
+    align-items: flex-end;
+    margin-left: 350px; 
+    margin-top: -40px;
+
+    width: 30px;
 `

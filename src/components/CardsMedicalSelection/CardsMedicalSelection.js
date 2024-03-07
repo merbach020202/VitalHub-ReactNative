@@ -20,7 +20,8 @@ import {
 
 import { AntDesign } from "@expo/vector-icons";
 
-export const CardsMedicalSelection = () => {
+export const CardsMedicalSelection = ({ navigation }) => {
+
   return (
     <Container>
       <TitleClinic>Selecionar Médico</TitleClinic>
@@ -91,11 +92,11 @@ export const CardsMedicalSelection = () => {
 
       <ConteinerButton>
 
-        <ButtonSecondaryIconMedical>
+        <ButtonSecondaryIconMedical onPress={() => navigation.replace("DateSelection")}>
           <ButtonTitleIconMedical>CONFIRMAR</ButtonTitleIconMedical>
         </ButtonSecondaryIconMedical>
 
-        <ContentAccount>
+        <ContentAccount onPress={() => navigation.replace("ClinicSelection")}>
           <TextLink>Cancelar</TextLink>
         </ContentAccount>
 

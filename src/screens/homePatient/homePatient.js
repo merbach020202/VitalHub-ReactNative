@@ -25,14 +25,14 @@ const Consultas = [
   { id: 5, nome: "Carlos", situacao: "Cancelado" },
 ];
 
-export const HomePatient = () => {
+export const HomePatient = ({ navigation }) => {
   const [statusList, setStatusList] = useState("Pendente");
   const [showModalCancel, setShowModalCancel] = useState(false);
   const [showModalIconMedical, setShowModalIconMedical] = useState(false);
 
   return (
     <Container>
-      <HeaderPatient />
+      <HeaderPatient navigation={navigation}/>
 
       <CalendarList />
 
@@ -43,6 +43,7 @@ export const HomePatient = () => {
           textButton={"Pendente"} 
           onPress={() => {setStatusList("Pendente")}}
         >
+
           <ButtonTitleHomePatient 
             clickButton={ statusList === "Pendente"}>Agendadas
           </ButtonTitleHomePatient>
@@ -57,13 +58,17 @@ export const HomePatient = () => {
           <ButtonTitleHomePatient
             clickButton={ statusList === "Realizado"}>Realizadas
           </ButtonTitleHomePatient>
+
         </ButtonHomePatient>
 
         <ButtonHomePatient clickButton={statusList === "Cancelado"} textButton={"Cancelado"}  onPress={() => {setStatusList("Cancelado")}}>
+          
           <ButtonTitleHomePatient
             clickButton={ statusList === "Cancelado"}>Canceladas
           </ButtonTitleHomePatient>
+
         </ButtonHomePatient>
+
       </ButtonConteiner>
 
       <ListComponent
@@ -73,6 +78,7 @@ export const HomePatient = () => {
           statusList == item.situacao && (
             <AppointmentCardPatient
               situacao={item.situacao}
+              navigation={navigation}
               onPressCancel={() => setShowModalCancel(true)}
               onPressAppointmentCardPatient={() => setShowModalIconMedical(true)
                 // Aqui vem o modal do medico
@@ -96,9 +102,10 @@ export const HomePatient = () => {
       <IconMedicalModal
         visible={showModalIconMedical}
         setShowModalCancel={setShowModalIconMedical}
+        navigation={navigation}
       />
 
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   );
 };

@@ -16,7 +16,8 @@ import {
   TopicsConteiner,
 } from "./Style";
 
-export const ClinicAppointment = ({ visible, setClinicAppointment2, ...rest }) => {
+export const ClinicAppointment = ({ visible, navigation, setClinicAppointment2, ...rest }) => {
+
   return (
     <Modal {...rest} visible={visible} transparent={true} animationType="fade">
 
@@ -57,11 +58,11 @@ export const ClinicAppointment = ({ visible, setClinicAppointment2, ...rest }) =
 
         <ConteinerButton>
 
-          <ButtonSecondary onPress={() => setClinicAppointment2(false)}>
+          <ButtonSecondary onPress={() => navigation.replace("HomePatient")}>
             <ButtonTitleIconMedical>CONFIRMAR</ButtonTitleIconMedical>
           </ButtonSecondary>
 
-          <ContentAccount>
+          <ContentAccount onPress={() => navigation.replace("HomePatient")}>
             <TextLink>Cancelar</TextLink>
           </ContentAccount>
 

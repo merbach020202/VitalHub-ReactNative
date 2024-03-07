@@ -16,7 +16,12 @@ import {
   TitleIconMedical2,
 } from "./Style";
 
-const IconMedicalModal = ({ visible, setShowModalCancel, ...rest }) => {
+const IconMedicalModal = ({ visible, navigation, setShowModalCancel, ...rest }) => {
+
+  async function ClinicSelection() {
+    navigation.navigate("ClinicSelection")
+  }
+
   return (
     <Modal {...rest} visible={visible} transparent={true} animationType="fade">
       <PatientModal>
@@ -51,11 +56,11 @@ const IconMedicalModal = ({ visible, setShowModalCancel, ...rest }) => {
 
           </ConteinerInputMedical>
 
-          <ButtonSecondaryIconMedical onPress={() => setShowModalCancel(false)}>
-            <ButtonTitleIconMedical>CONFIRMAR</ButtonTitleIconMedical>
+          <ButtonSecondaryIconMedical onPress={() => ClinicSelection()}>
+            <ButtonTitleIconMedical>CONTINUAR</ButtonTitleIconMedical>
           </ButtonSecondaryIconMedical>
 
-          <ContentAccount>
+          <ContentAccount onPress={() => navigation.replace("Main")}>
             <TextLink>Cancelar</TextLink>
           </ContentAccount>
 

@@ -108,8 +108,8 @@ export const TextLink = styled.Text`
     font-size: 14px;
     font-family: 'MontserratAlternates_500Medium';
 
-    margin-top: 10px;
-    margin-bottom: 15px;
+    /* margin-top: 8px;
+    margin-bottom: 15px; */
     
     align-self: flex-start;
     margin-left: 20px;
