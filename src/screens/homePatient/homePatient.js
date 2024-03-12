@@ -16,6 +16,7 @@ import CancelationModal from "../../components/CancelationModal/CancelationModal
 import { ConteinerIconHomePatient, HoldConteiner } from "../../components/ConteinerIcon/Style";
 import { FontAwesome5 } from "@expo/vector-icons";
 import IconMedicalModal from "../../components/IconMedicalModal/IconMedicalModal";
+import CardModalMedico from "../../components/cardModal/cardModal";
 
 const Consultas = [
   { id: 1, nome: "Carlos", situacao: "Pendente" },
@@ -29,6 +30,7 @@ export const HomePatient = ({ navigation }) => {
   const [statusList, setStatusList] = useState("Pendente");
   const [showModalCancel, setShowModalCancel] = useState(false);
   const [showModalIconMedical, setShowModalIconMedical] = useState(false);
+  const [showModalDoctor, setShowModalDoctor] = useState(false);
 
   return (
     <Container>
@@ -83,6 +85,7 @@ export const HomePatient = ({ navigation }) => {
               onPressAppointmentCardPatient={() => setShowModalIconMedical(true)
                 // Aqui vem o modal do medico
               }
+              onPressCardDoctor={() => setShowModalDoctor(true)}
             />
           )
         }
@@ -91,6 +94,12 @@ export const HomePatient = ({ navigation }) => {
       <CancelationModal
         visible={showModalCancel}
         setShowModalCancel={setShowModalCancel}
+      />
+
+      <CardModalMedico
+        visible={showModalDoctor}
+        setShowModalDoctor={setShowModalDoctor}
+        navigation={navigation}
       />
 
       <HoldConteiner>

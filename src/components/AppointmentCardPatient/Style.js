@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Title } from "../Title/Style";
 
-export const ContainerCardList = styled.View`
+export const ContainerCardList = styled.TouchableOpacity`
     width: 90%;
     height: 100px;
     flex-direction: row;

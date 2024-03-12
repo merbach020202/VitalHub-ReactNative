@@ -13,18 +13,19 @@ import {
   TextBold,
   ViewRow,
 } from "./Style";
-import { PatientConteiner } from "../Conteiner/Style";
 
 export const AppointmentCardPatient = ({
   situacao = "Pendente",
   onPressCancel,
   onPressAppointment,
+  onPressCardDoctor,
 }) => {
+
   return (
-    <>
-      <PatientConteiner>
-        <ContainerCardList>
-          <ProfileImage source={require("../../assets/MedicoImg.jpg")} />
+
+
+        <ContainerCardList onPress={onPressCardDoctor}>
+          <ProfileImage source={require("../../assets/Rectangle 422.png")} />
 
           <ContentCard>
             <DataProfileCard>
@@ -63,7 +64,5 @@ export const AppointmentCardPatient = ({
           </ContentCard>
         </ContainerCardList>
 
-      </PatientConteiner>
-    </>
   );
 };

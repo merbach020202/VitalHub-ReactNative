@@ -22,7 +22,6 @@ import { MedicalRecords } from './src/screens/medicalRecords/medicalRecords';
 import { ClinicSelection } from './src/screens/clinicSelection/clinicSelection';
 import { MedicalSelection } from './src/screens/medicalSelection/medicalSelection';
 import DateSelection from './src/screens/dateSelection/dateSelection';
-import { ClinicAppointment } from './src/components/ClinicAppointment/ClinicAppointment';
 import { Main } from './src/screens/Main/Main';
 
 export default function App() {
@@ -53,7 +52,6 @@ export default function App() {
       <Stack.Navigator
         screenOptions={{headerShown : false }}
       >
-
         {/*  */}
         <Stack.Screen
           name='Login'
