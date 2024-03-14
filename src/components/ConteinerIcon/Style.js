@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 export const ConteinerIcon = styled.TouchableOpacity`
-    /* flex-direction: row;
-    margin-top: 30px;
-    margin-right: 20px; */
-
     width: 90%;
     flex-direction: row;
     margin-top: 50px;
@@ -14,10 +10,6 @@ export const ConteinerIcon = styled.TouchableOpacity`
 ///////////////HomePatient///////////////
 
 export const ConteinerIconHeader = styled.TouchableOpacity`
-    /* flex-direction: row;
-    margin-top: 30px;
-    margin-right: 20px; */
-    
     align-items: flex-end;
     margin-right: 20px; 
     margin-top: -40px;
@@ -34,10 +26,6 @@ export const ConteinerIconHomePatient = styled.TouchableOpacity`
 
     justify-content: center;
     align-items: center;
-
-    /* position: relative;
-    margin-top: 580px;
-    margin-left: 300px;     */
 `
 
 export const HoldConteiner = styled.View`

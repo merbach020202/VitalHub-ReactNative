@@ -9,7 +9,6 @@ import { ButtonConteiner, Container } from "../../components/Conteiner/Style";
 import CalendarList from "../../components/Calendar/CalendarStrip";
 import { ListComponent } from "../../components/List/List";
 import { useState } from "react";
-import { Footer } from "../../components/Footer/Footer";
 import { AppointmentCardPatient } from "../../components/AppointmentCardPatient/AppointmentCardPatient";
 import { HeaderPatient } from "../../components/HeaderPatient/HeaderPatient";
 import CancelationModal from "../../components/CancelationModal/CancelationModal";
@@ -94,6 +93,7 @@ export const HomePatient = ({ navigation }) => {
       <CancelationModal
         visible={showModalCancel}
         setShowModalCancel={setShowModalCancel}
+        navigation={navigation}
       />
 
       <CardModalMedico

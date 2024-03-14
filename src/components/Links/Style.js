@@ -17,7 +17,6 @@ export const LinkMedium = styled.Text`
 
 export const TextLink = styled(LinkMedium)`
     color: #4E4B59;
-    text-decoration: none;
 `
 
 export const ContentAccount = styled.Text`

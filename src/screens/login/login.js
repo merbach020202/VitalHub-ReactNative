@@ -14,7 +14,7 @@ export const Login = ({ navigation }) => {
   // Chama a função de login
 
   async function Login() {
-    navigation.navigate("Main") // Aqui quando eu quiser que a main n volte para a login, basta colocar .replace, ao inves de .navigate
+    navigation.replace("Main") // Aqui quando eu quiser que a main n volte para a login, basta colocar .replace, ao inves de .navigate
   }
 
   async function ForgotPassword() {

@@ -23,6 +23,7 @@ import { ClinicSelection } from './src/screens/clinicSelection/clinicSelection';
 import { MedicalSelection } from './src/screens/medicalSelection/medicalSelection';
 import DateSelection from './src/screens/dateSelection/dateSelection';
 import { Main } from './src/screens/Main/Main';
+import { ConsultationLocation } from './src/screens/consultationLocation/consultationLocation';
 
 export default function App() {
 
@@ -162,6 +163,14 @@ export default function App() {
           component={DateSelection}
           // titulo da tela
           options={{title: 'DateSelection'}}
+        />
+        
+        <Stack.Screen
+          name='ConsultationLocation'
+          // componente que será chamado
+          component={ConsultationLocation}
+          // titulo da tela
+          options={{title: 'ConsultationLocation'}}
         />
 
       </Stack.Navigator>

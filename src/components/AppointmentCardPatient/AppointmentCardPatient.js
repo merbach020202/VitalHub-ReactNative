@@ -17,14 +17,14 @@ import {
 export const AppointmentCardPatient = ({
   situacao = "Pendente",
   onPressCancel,
+  navigation,
   onPressAppointment,
   onPressCardDoctor,
 }) => {
 
   return (
 
-
-        <ContainerCardList onPress={onPressCardDoctor}>
+        <ContainerCardList onPress={onPressCardDoctor} navigation={navigation}>
           <ProfileImage source={require("../../assets/Rectangle 422.png")} />
 
           <ContentCard>

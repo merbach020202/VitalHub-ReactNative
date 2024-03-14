@@ -5,8 +5,8 @@ import { ContentAccount, TextLink } from "../Links/Style";
 
 const CardModalMedico = ({ visible, navigation, setShowModalAppointment, ...rest }) => {
 
-  async function ConsultationLocacation() {
-    navigation.navigate("ConsultationLocacation")
+  async function ConsultationLocation() {
+    navigation.replace("ConsultationLocation")
   }
 
   return (
@@ -24,11 +24,11 @@ const CardModalMedico = ({ visible, navigation, setShowModalAppointment, ...rest
             <SubTitleTextModal>CRM-15286</SubTitleTextModal>
           </TextBox>
 
-          <ButtonSecondary onPress={() => ConsultationLocacation()}>
+          <ButtonSecondary onPress={() => ConsultationLocation()}>
             <ButtonSecondaryTitleModal>VER LOCAL DA CONSULTA</ButtonSecondaryTitleModal>
           </ButtonSecondary>
 
-          <ContentAccount>
+          <ContentAccount onPress={() => }>
             <TextLink>Cancelar</TextLink>
           </ContentAccount>
         </ModalContent>
