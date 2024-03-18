@@ -3,7 +3,7 @@ import { Container } from "../../components/Conteiner/Style";
 import { ButtonMedicalRecords, ButtonTitleMedicalRecords, ConteinerInputsMedicalRecords, InputMedicalRecord, InputMedicalRecord2, LogoPerfilMedicalRecords, ProfileNameMedicalRecords, SubTitleBoxMedicalRecords, SubTitleTextMedicalRecords, TextBoxMedicalRecord, TitleMedicalRecord } from "./Style";
 
 
-export const MedicalRecords = () => {
+export const MedicalRecordsMedical = () => {
   return (
     <ScrollView>
       <Container>

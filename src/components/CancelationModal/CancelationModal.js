@@ -4,7 +4,12 @@ import { ButtonSecondarTitle, ButtonSecondary } from "../Button/Style";
 import { ModalContent, ModalText, PatientModal } from "./Style";
 import { ContentAccount, TextLink } from "../Links/Style";
 
-const CancelationModal = ({ visible, setShowModalCancel, ...rest }) => {
+const CancelationModal = ({ visible, navigation, setShowModalCancel, ...rest }) => {
+
+  async function Main() {
+    navigation.replace("Main")
+  }
+
   return (
     <Modal {...rest} visible={visible} transparent={true} animationType="fade">
       <PatientModal>
@@ -21,7 +26,7 @@ const CancelationModal = ({ visible, setShowModalCancel, ...rest }) => {
             <ButtonSecondarTitle>CONFIRMAR</ButtonSecondarTitle>
           </ButtonSecondary>
 
-          <ContentAccount>
+          <ContentAccount onPress={() => Main()}>
             <TextLink>Cancelar</TextLink>
           </ContentAccount>
         </ModalContent>

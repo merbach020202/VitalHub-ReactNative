@@ -22,6 +22,10 @@ export const AppointmentCardPatient = ({
   onPressCardDoctor,
 }) => {
 
+  async function MedicalRecordsPatient() {
+    navigation.replace("MedicalRecordsPatient")
+  }
+
   return (
 
         <ContainerCardList onPress={onPressCardDoctor} navigation={navigation}>
@@ -56,7 +60,7 @@ export const AppointmentCardPatient = ({
                   <ButtonText situacao={situacao}>Cancelar</ButtonText>
                 </ButtonCard>
               ) : (
-                <ButtonCard onPress={onPressAppointment}>
+                <ButtonCard onPress={() => MedicalRecordsPatient()}>
                   <ButtonText situacao={situacao}>Ver Prontuário</ButtonText>
                 </ButtonCard>
               )}

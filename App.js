@@ -17,13 +17,14 @@ import { Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular } from
 import { Profile } from './src/screens/profile/profile';
 import { HomePatient } from './src/screens/homePatient/homePatient';
 import { HomeDoctor } from './src/screens/homeDoctor/homeDoctor';
-import { MedicalRecords } from './src/screens/medicalRecords/medicalRecords';
+import { MedicalRecordsMedical } from './src/screens/medicalRecordsMedical/medicalRecordsMedical';
 
 import { ClinicSelection } from './src/screens/clinicSelection/clinicSelection';
 import { MedicalSelection } from './src/screens/medicalSelection/medicalSelection';
 import DateSelection from './src/screens/dateSelection/dateSelection';
 import { Main } from './src/screens/Main/Main';
 import { ConsultationLocation } from './src/screens/consultationLocation/consultationLocation';
+import { MedicalRecordPatient } from './src/screens/medicalRecordsPatient/medicalRecordsPatient';
 
 export default function App() {
 
@@ -134,11 +135,19 @@ export default function App() {
         />
         
         <Stack.Screen
-          name='MedicalRecords'
+          name='MedicalRecordsMedical'
           // componente que será chamado
-          component={MedicalRecords}
+          component={MedicalRecordsMedical}
           // titulo da tela
-          options={{title: 'MedicalRecords'}}
+          options={{title: 'MedicalRecordsMedical'}}
+        />
+        
+        <Stack.Screen
+          name='MedicalRecordsPatient'
+          // componente que será chamado
+          component={MedicalRecordPatient}
+          // titulo da tela
+          options={{title: 'MedicalRecordsPatient'}}
         />
         
         <Stack.Screen

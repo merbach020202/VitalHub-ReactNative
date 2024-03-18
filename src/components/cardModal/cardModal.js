@@ -9,6 +9,10 @@ const CardModalMedico = ({ visible, navigation, setShowModalAppointment, ...rest
     navigation.replace("ConsultationLocation")
   }
 
+  async function Main() {
+    navigation.replace("Main")
+  }
+
   return (
     <Modal {...rest} visible={visible} transparent={true} animationType="fade">
       <PatientModal>
@@ -28,7 +32,7 @@ const CardModalMedico = ({ visible, navigation, setShowModalAppointment, ...rest
             <ButtonSecondaryTitleModal>VER LOCAL DA CONSULTA</ButtonSecondaryTitleModal>
           </ButtonSecondary>
 
-          <ContentAccount onPress={() => }>
+          <ContentAccount onPress={() => Main()}>
             <TextLink>Cancelar</TextLink>
           </ContentAccount>
         </ModalContent>

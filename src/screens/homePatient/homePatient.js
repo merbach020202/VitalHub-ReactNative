@@ -31,6 +31,10 @@ export const HomePatient = ({ navigation }) => {
   const [showModalIconMedical, setShowModalIconMedical] = useState(false);
   const [showModalDoctor, setShowModalDoctor] = useState(false);
 
+  async function MedicalRecordsPatient() {
+    navigation.replace("MedicalRecordsPatient")
+  }
+
   return (
     <Container>
       <HeaderPatient navigation={navigation}/>
@@ -40,18 +44,19 @@ export const HomePatient = ({ navigation }) => {
       <ButtonConteiner>
 
         <ButtonHomePatient 
+
           clickButton={statusList === "Pendente"} 
           textButton={"Pendente"} 
-          onPress={() => {setStatusList("Pendente")}}
-        >
+          onPress={() => {setStatusList("Pendente")}}>
 
           <ButtonTitleHomePatient 
             clickButton={ statusList === "Pendente"}>Agendadas
           </ButtonTitleHomePatient>
-
         </ButtonHomePatient>
 
+
         <ButtonHomePatient 
+
           clickButton={statusList === "Realizado"} 
           textButton={"Realizado"}  
           onPress={() => {setStatusList("Realizado")}}>
@@ -59,15 +64,18 @@ export const HomePatient = ({ navigation }) => {
           <ButtonTitleHomePatient
             clickButton={ statusList === "Realizado"}>Realizadas
           </ButtonTitleHomePatient>
-
         </ButtonHomePatient>
 
-        <ButtonHomePatient clickButton={statusList === "Cancelado"} textButton={"Cancelado"}  onPress={() => {setStatusList("Cancelado")}}>
+
+        <ButtonHomePatient 
+
+          clickButton={statusList === "Cancelado"} 
+          textButton={"Cancelado"}  
+          onPress={() => {setStatusList("Cancelado")}}>
           
           <ButtonTitleHomePatient
             clickButton={ statusList === "Cancelado"}>Canceladas
           </ButtonTitleHomePatient>
-
         </ButtonHomePatient>
 
       </ButtonConteiner>
