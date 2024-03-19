@@ -20,17 +20,20 @@ import {
   ContainerImageExame,
   InputRecordInsertionExame,
   TextBottonRecord,
+  
   TextButtonRecord,
   ViewButtonCamera,
   ViewLine,
-  ButtonCard
+  ButtonCard,
+  TitleRecordInsertion
 } from "./Style";
 
 import { useEffect, useRef, useState } from "react";
 
 import { Image, Modal, Text, TouchableOpacity, View, StyleSheet } from "react-native";
 
-export const MedicalRecordPatient = ({ navigation }) => {
+export const MedicalRecordsPatient = ({ navigation }) => {
+  
   const [hasPermission, setHasPermission] = useState(null);
   //camera frontal etraseira
   const [type, setType] = useState(Camera.Constants.Type.back);

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import { InputRecordInsertion2 } from "../../components/Input/Input";
+import { TextButtonCard } from "../../components/Title/Style";
 
 export const TitleMedicalRecord = styled.Text`
   font-family: "MontserratAlternates_600SemiBold";
@@ -127,7 +127,7 @@ export const InputRecordInsertionExame = styled(InputRecordInsertion2)`
   height: 120px;
 `;
 
-////////// Css do Lucas //////////
+////////// Css  //////////
 
 ///// Conteiner /////
 export const Container = styled.SafeAreaView`
@@ -245,17 +245,21 @@ export const TextBottonRecord = styled.Text`
   font-family: "MontserratAlternates_700Bold";
 `;
 
-export const TextButtonCard = styled.Text`
-  color: ${(props) => props.situacao == "pendente" ? "#c81d25" : "#344f8f"} ;
-  font-size: 14px;
-  text-decoration: none;
-  font-family: "MontserratAlternates_500Medium";
-  margin-left: -10px;
-`;
-
 export const TextButtonRecord = styled(TextButtonCard)`
   color: #c81d25;
   margin-right: 40px;
+`;
+
+export const ButtonMedicalRecord = styled.TouchableOpacity`
+  flex-direction: row;
+  gap: 10px;
+  background-color: #49b3ba;
+  width: 190px;
+  height: 50px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 `;
 
 export const ViewButtonCamera = styled.View`

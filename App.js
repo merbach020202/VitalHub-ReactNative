@@ -24,7 +24,7 @@ import { MedicalSelection } from './src/screens/medicalSelection/medicalSelectio
 import DateSelection from './src/screens/dateSelection/dateSelection';
 import { Main } from './src/screens/Main/Main';
 import { ConsultationLocation } from './src/screens/consultationLocation/consultationLocation';
-import { MedicalRecordPatient } from './src/screens/medicalRecordsPatient/medicalRecordsPatient';
+import { MedicalRecordsPatient } from './src/screens/medicalRecordsPatient/medicalRecordsPatient';
 
 export default function App() {
 
@@ -145,7 +145,7 @@ export default function App() {
         <Stack.Screen
           name='MedicalRecordsPatient'
           // componente que será chamado
-          component={MedicalRecordPatient}
+          component={MedicalRecordsPatient}
           // titulo da tela
           options={{title: 'MedicalRecordsPatient'}}
         />

@@ -36,3 +36,13 @@ export const TitleClinic = styled(ProfileName)`
     padding-top: 70px;
     padding-left: 95px;
 `
+
+////////////Outra coisa////////////
+
+export const TextButtonCard = styled.Text`
+  color: ${(props) => props.situacao == "pendente" ? "#c81d25" : "#344f8f"} ;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: "MontserratAlternates_500Medium";
+  margin-left: -10px;
+`;
